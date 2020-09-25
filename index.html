@@ -1,82 +1,86 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
-    <header>
-      <!--Логотип-->
-      <a>
-        <img src="https://via.placeholder.com/220x47" width="220" height="47" alt="ТЕХНОМАРТ">
-      </a>
-      <!--Поиск-->
-      <form action="#" method="get">
-        <label >
-          Поиск:
-          <svg width="17" height="17"></svg>
-          <input type="text" name="search-string" placeholder="Поиск:">
-        </label>
-      </form>
-      <!--Закладки-->
-      <button type="button">
-        <svg width="14" height="16"></svg> Закладки: 0
-      </button>
-      <!--Корзина-->
-      <ul>
-        <li>
-          <a href="">
-            <svg width="15" height="15"></svg> Корзина: 0
-          </a>
-        </li>
-        <li>
-          <a href="">Оформить заказ</a>
-        </li>
-      </ul>
-      <p>
+  <body class="page-body">
+    <header class="main-header">
+      <div class="submenu"
+        <!--Логотип-->
+        <a class="main-header-logo link">
+          <img src="https://via.placeholder.com/220x47" width="220" height="47" alt="ТЕХНОМАРТ">
+        </a>
+        <!--Поиск-->
+        <form class="search-form" action="#" method="get">
+          <label class="visually-hidden" for="search-string">Поиск: </label>
+          <svg class="submenu-icon search-form-icon" tabindex="-1" width="17" height="17"></svg>
+          <input class="search-form-input" type="text" id="search-string" name="search-string" placeholder="Поиск:">
+        </form>
+        <!--Закладки-->
+        <button class="button bookmark-button" type="button">
+          <svg class="submenu-icon " tabindex="-1" width="14" height="16"></svg> Закладки: 0
+        </button>
+        <!--Корзина и Оформление заказа-->
+        <ul class="list products-actions-list">
+          <li class="products-actions-item">
+            <a class="link basket-link" href="">
+              <svg class="submenu-icon" tabindex="-1" width="15" height="15"></svg> Корзина: 0
+            </a>
+          </li>
+          <li class="products-actions-item">
+            <a class="link order-link" href="">Оформить заказ</a>
+          </li>
+        </ul>
+      </div>
+      <p class="main-header-text">
         <i>Интернет-магазин 
           строительных материалов 
           и инструментов для ремонта</i>
       </p>
       <!--Контакты-->
-      <address>
-        <svg width="19" height="19"></svg>
-        <a href="tel:+78125550555">+7 (812) 555-05-55</a>
+      <address class="contact-phone">
+        <svg class="phone-icon" width="19" height="19"></svg>
+        <a class="link contact-phone-link" href="tel:+78125550555">+7 (812) 555-05-55</a>
       </address>
-      <address>г.Санкт-Петербург, ул. Б.Конюшенная, д.19/8</address>
-      <ul>
-        <li>
-          <a href="">
-            <svg width="20" height="17"></svg>Войти
+      <address class="contact-address">г.Санкт-Петербург, ул. Б.Конюшенная, д.19/8</address>
+      <ul class="list authentication-actions-list">
+        <li class="authentication-actions-item">
+          <a class="link login-link" href="">
+            <svg class="login-link-icon" tabindex="-1" width="20" height="17"></svg>Войти
           </a>
         </li>
-        <li>
-          <a href="">Регистрация</a>
+        <li class="authentication-actions-item">
+          <a class="link registration-link" href="">Регистрация</a>
         </li>
       </ul>
       <!--Главная навигация-->
-      <nav>
-        <ul>
+      <nav class="main-navigation">
+        <ul class="list main-navigation-list">
           <li>
-            <a>Главная</a>
+            <a class="link">Главная</a>
           </li>
           <li>
-            <a href="">Компания</a>
+            <a class="link main-navigation-link" href="">Компания</a>
           </li>
           <li>
-            <a href="catalog.html">Каталог</a>
+            <a class="link main-navigation-link" href="catalog.html">Каталог</a>
           </li>
           <li>
-            <a href="">Новости</a>
+            <a class="link main-navigation-link" href="">Новости</a>
           </li>
           <li>
-            <a href="">Спецпредложения</a>
+            <a class="link main-navigation-link" href="">Спецпредложения</a>
           </li>
           <li>
-            <a href="">Доставка</a>
+            <a class="link main-navigation-link" href="">Доставка</a>
           </li>
           <li>
-            <a href="">Контакты</a>
+            <a class="link main-navigation-link" href="">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -338,7 +342,7 @@
       <button type="button">Закрыть</button>
     </section>
     <section>
-      <h2 class="visually-hidden">Напишите нам</h2>
+      <h2 class="visually-hidden">Наше местоположение</h2>
       <!--Здесь будет карта-->
       <button type="button">Закрыть</button>
     </section>

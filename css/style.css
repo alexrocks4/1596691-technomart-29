@@ -1,0 +1,189 @@
+/******* Variables ******/
+:root {
+
+    --basic-black: #000000;
+    --basic-dark: #32425C;
+    --basic-dark-extra: #293449;
+    --basic-dark-ultra: #161D29;
+    --basic-dark-ultra-100: #1D2739;
+    --basic-red: #EE3643;
+    --basic-red-dark: #BA2732;
+    --basic-gray: #B7BFC8;
+    --basic-gray-light: #C5C5C5;
+    --basig-gray-dark: #3D546F;
+    --basic-green: #63A63E;
+    --basic-green-light: #5FBB2D;
+    --basic-white: #FFFFFF;
+    --special-black-transparent-ultra: rgba(0, 0, 0, 0.0001);
+    --special-white-transparent:  rgba(255, 255, 255, 0.5);
+    --special-white-transparent-extra:  rgba(255, 255, 255, 0.3);    
+    
+}
+
+/******* Global *******/
+body {
+    min-width: 960px;
+    margin: 0;
+    padding: 0;
+    font-family: "Cuprum", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--basic-black);
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/******* General *******/
+.list {
+    list-style: none;
+}
+.link {
+    color: inherit;
+    text-decoration: none;
+}
+.button {
+    font: inherit;
+    text-align: center;
+    color: var(--basic-white);
+    vertical-align: middle;
+    text-transform: uppercase;
+    background-color: var(--basic-red);
+    border: none;
+}
+
+.button:focus {
+    outline: none;
+}
+
+/******* Main header *******/
+.main-header {
+    background-color: var(--special-black-transparent-ultra);
+}
+.submenu {
+    background-color: var(--basic-dark-extra);
+    color: var(--basic-white);
+}
+.submenu-icon {
+    background-color: var(--special-white-transparent-extra);
+}
+.submenu-icon:focus {
+    outline: none;
+}
+.submenu-icon:hover {
+    background-color: var(--basic-white);
+    cursor: pointer;
+}
+.submenu-icon:active {
+    background-color: var(--special-white-transparent-extra);
+}
+/* Logo */
+.main-header-logo {
+    background-color: var(--basic-red);
+}
+.main-header-logo:active {
+    background-color: var(--basic-red-dark);
+}
+/* Search */
+.search-form-input {
+    background-color: var(--basic-dark-extra);
+    border: none;
+    font: inherit;
+}
+.search-form-input:focus {
+    background-color: var(--basic-white);
+    outline: none;
+}
+.search-form-input::placeholder {
+    color: var(--basic-white);
+}
+/* Bookmark */
+.bookmark-button {
+    text-transform: none;
+    background-color: transparent;
+}
+.bookmark-button:active {
+    color: var(--special-white-transparent);
+    background-color: var(--basic-dark-ultra);
+}
+/* Products actions */
+.basket-link:active {
+    color: var(--special-white-transparent);
+}
+.order-link {
+    background-color: var(--basic-green);
+}
+.order-link:hover {
+    background-color: var(--basic-green-light);
+}
+.order-link:active {
+    color: var(--special-white-transparent);
+}
+/* Main header text */
+.main-header-text {
+    font-size: 16px;
+    line-height: 23px;
+    color: var(--basic-red);
+}
+/* Contacts */
+.contact-phone {
+    font-style: inherit;
+    border: 3px solid var(--basic-white);
+}
+.phone-icon {
+    background-color: var(--main-header-gray);
+}
+.contact-phone-link {
+    font-size: 21px;
+    line-height: 30px;
+    font-weight: bold;
+    color: var(--basic-red);
+}
+.contact-address {
+    font-size: 14px;
+    line-height: 24px;
+    font-style: inherit;
+    color: var(--basic-dark);
+}
+/* Authentication actions */
+.authentication-actions-list {
+    font-size: 21px;
+    line-height: 21px;
+}
+.login-link-icon {
+    background-color: var(--basic-gray-light);
+}
+.login-link:hover,
+.registration-link:hover {
+    color: var(--basic-red);
+}
+.login-link:active,
+.registration-link:active {
+    color: var(--basic-gray-light);
+}
+.login-link-icon:hover {
+    background-color: var(--basig-gray-dark);
+}
+.login-link-icon:active {
+    background-color: var(--basic-gray-light);
+}
+.login-link-icon:focus {
+    outline: none;
+}
+/* Main navigation */
+.main-navigation {
+    background-color: var(--basic-dark);
+    color: var(--basic-white);
+}
+.main-navigation-link:hover {
+    background-color: var(--basic-dark-extra);
+}
+.main-navigation-link:active {
+    background-color: var(--basic-dark-ultra-100);
+    color: var(--special-white-transparent);
+}
