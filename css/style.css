@@ -155,8 +155,23 @@ img {
     font-size: 21px;
     line-height: 21px;
 }
-.login-link-icon {
-    background-color: var(--basic-gray-light);
+.login-link {
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: baseline;
+    background-color: var(--special-black-transparent-ultra);
+    width: 121px;
+    height: 45px;
+    padding: 12px 27px 12px 45px;
+    background-image: url("../img/icon-login.svg");
+    background-repeat: no-repeat;
+    background-position: 19px 50%;
+}
+.login-link:hover {
+    background-image: url("../img/icon-login-dark.svg");
+}
+.login-link:active {
+    background-image: url("../img/icon-login.svg");
 }
 .login-link:hover,
 .registration-link:hover {
@@ -165,15 +180,6 @@ img {
 .login-link:active,
 .registration-link:active {
     color: var(--basic-gray-light);
-}
-.login-link-icon:hover {
-    background-color: var(--basig-gray-dark);
-}
-.login-link-icon:active {
-    background-color: var(--basic-gray-light);
-}
-.login-link-icon:focus {
-    outline: none;
 }
 /* Main navigation */
 .main-navigation {
