@@ -10,7 +10,7 @@
     --basic-red-dark: #BA2732;
     --basic-gray: #B7BFC8;
     --basic-gray-light: #C5C5C5;
-    --basig-gray-dark: #3D546F;
+    --basic-gray-dark: #3D546F;
     --basic-green: #63A63E;
     --basic-green-light: #5FBB2D;
     --basic-white: #FFFFFF;
@@ -156,22 +156,13 @@ img {
     line-height: 21px;
 }
 .login-link {
-    box-sizing: border-box;
-    display: inline-block;
-    vertical-align: baseline;
-    background-color: var(--special-black-transparent-ultra);
-    width: 121px;
-    height: 45px;
-    padding: 12px 27px 12px 45px;
-    background-image: url("../img/icon-login.svg");
-    background-repeat: no-repeat;
-    background-position: 19px 50%;
+    background-color: var(--special-black-transparent-ultra)
 }
-.login-link:hover {
-    background-image: url("../img/icon-login-dark.svg");
+.login-icon {
+    background-color: var(--basic-gray-light);
 }
-.login-link:active {
-    background-image: url("../img/icon-login.svg");
+.login-link:hover .login-icon {
+    background-color: var(--basic-gray-dark);
 }
 .login-link:hover,
 .registration-link:hover {
@@ -180,6 +171,9 @@ img {
 .login-link:active,
 .registration-link:active {
     color: var(--basic-gray-light);
+}
+.login-link:active .login-icon {
+    background-color: var(--basic-gray-light);
 }
 /* Main navigation */
 .main-navigation {
