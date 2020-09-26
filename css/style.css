@@ -1,10 +1,11 @@
 /******* Variables ******/
 :root {
-
+    --basic-beige: #F9F5F0;
     --basic-black: #000000;
     --basic-blue-light: #3BBCE3;
     --basic-dark: #32425C;
     --basic-dark-extra: #293449;
+    --basic-dark-extra-100: #32425C;
     --basic-dark-ultra: #161D29;
     --basic-dark-ultra-100: #1D2739;
     --basic-pink: #DC91D8;
@@ -57,18 +58,27 @@ img {
     color: inherit;
     text-decoration: none;
 }
+/* Buttons */
 .button {
     font: inherit;
     text-align: center;
-    color: var(--basic-white);
     vertical-align: middle;
     text-transform: uppercase;
-    background-color: var(--basic-red);
     border: none;
+    cursor: pointer;
 }
-
 .button:focus {
     outline: none;
+}
+.button-danger{
+    color: var(--basic-white);
+    background-color: var(--basic-red);
+}
+.button-danger:hover {
+    background-color: var(--basic-red-dark-extra);
+}
+.button-danger:active {
+    background-color: var(--basic-red-dark-ultra);
 }
 
 /******* Main header *******/
@@ -114,6 +124,7 @@ img {
 }
 /* Bookmark */
 .bookmark-button {
+    color: var(--basic-white);
     text-transform: none;
     background-color: transparent;
 }
@@ -200,7 +211,7 @@ img {
 
 /******* Index page main content *******/
 
-/* Promo block */
+/*** Promo block ***/
 .promo-list {
     list-style: none;
     color: var(--basic-white);
@@ -260,9 +271,19 @@ img {
 .slider-content {
     background-color: var(--basic-gray);
 }
-.slider-link:hover {
-    background-color: var(--basic-red-dark-extra);
+.slider-link {
+    font-size: 14px;
+    line-height: 18px;
 }
-.slider-link:active {
-    background-color: var(--basic-red-dark-ultra);
+
+/*** Popular products block ***/
+.block-header-container {
+    background-color: var(--basic-beige);
+}
+.block-header {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: normal;
+    color: var(--basic-dark-extra-100);
+    text-transform: uppercase;
 }
