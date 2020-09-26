@@ -2,21 +2,31 @@
 :root {
 
     --basic-black: #000000;
+    --basic-blue-light: #3BBCE3;
     --basic-dark: #32425C;
     --basic-dark-extra: #293449;
     --basic-dark-ultra: #161D29;
     --basic-dark-ultra-100: #1D2739;
+    --basic-pink: #DC91D8;
     --basic-red: #EE3643;
     --basic-red-dark: #BA2732;
+    --basic-red-dark-extra: #CA2C37;
+    --basic-red-dark-ultra: #BA2732;
     --basic-gray: #B7BFC8;
     --basic-gray-light: #C5C5C5;
     --basic-gray-dark: #3D546F;
     --basic-green: #63A63E;
     --basic-green-light: #5FBB2D;
+    --basic-green-light-extra: #8ED78F;
+    --basic-yellow-light: #FFBF47;
+    --basic-yellow-light-extra: #FFC047;
     --basic-white: #FFFFFF;
-    --special-black-transparent-ultra: rgba(0, 0, 0, 0.0001);
-    --special-white-transparent:  rgba(255, 255, 255, 0.5);
-    --special-white-transparent-extra:  rgba(255, 255, 255, 0.3);    
+    --special-black-ultra: rgba(0, 0, 0, 0.0001);
+    --special-gray-light: rgba(197, 197, 197, 0.3);
+    --special-gray-light-100: rgba(169, 169, 169, 0.3);
+    --special-white:  rgba(255, 255, 255, 0.5);
+    --special-white-extra:  rgba(255, 255, 255, 0.3);
+
     
 }
 
@@ -63,14 +73,14 @@ img {
 
 /******* Main header *******/
 .main-header {
-    background-color: var(--special-black-transparent-ultra);
+    background-color: var(--special-black-ultra);
 }
 .submenu {
     background-color: var(--basic-dark-extra);
     color: var(--basic-white);
 }
 .submenu-icon {
-    background-color: var(--special-white-transparent-extra);
+    background-color: var(--special-white-extra);
 }
 .submenu-icon:focus {
     outline: none;
@@ -80,7 +90,7 @@ img {
     cursor: pointer;
 }
 .submenu-icon:active {
-    background-color: var(--special-white-transparent-extra);
+    background-color: var(--special-white-extra);
 }
 /* Logo */
 .main-header-logo {
@@ -108,12 +118,12 @@ img {
     background-color: transparent;
 }
 .bookmark-button:active {
-    color: var(--special-white-transparent);
+    color: var(--special-white);
     background-color: var(--basic-dark-ultra);
 }
 /* Products actions */
 .basket-link:active {
-    color: var(--special-white-transparent);
+    color: var(--special-white);
 }
 .order-link {
     background-color: var(--basic-green);
@@ -122,7 +132,7 @@ img {
     background-color: var(--basic-green-light);
 }
 .order-link:active {
-    color: var(--special-white-transparent);
+    color: var(--special-white);
 }
 /* Main header text */
 .main-header-text {
@@ -156,7 +166,7 @@ img {
     line-height: 21px;
 }
 .login-link {
-    background-color: var(--special-black-transparent-ultra)
+    background-color: var(--special-black-ultra)
 }
 .login-icon {
     background-color: var(--basic-gray-light);
@@ -185,5 +195,74 @@ img {
 }
 .main-navigation-link:active {
     background-color: var(--basic-dark-ultra-100);
-    color: var(--special-white-transparent);
+    color: var(--special-white);
+}
+
+/******* Index page main content *******/
+
+/* Promo block */
+.promo-list {
+    list-style: none;
+    color: var(--basic-white);
+}
+.promo-materials {
+    background-color: var(--basic-yellow-light);
+}
+.promo-tools {
+    background-color: var(--basic-blue-light);
+}
+.promo-constructing {
+    background-color: var(--basic-pink);
+}
+.promo-discounts {
+    background-color: var(--basic-green-light-extra);
+}
+.promo-delivery {
+    background-color: var(--basic-yellow-light-extra);
+}
+.promo-subheader {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+}
+.promo-link {
+    color: var(--basic-white);
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    background-color: var(--special-white-extra);
+}
+.promo-link:hover {
+    background-color: var(--special-gray-light);
+}
+.promo-link:active {
+    background-color: var(--special-gray-light-100);
+}
+.promo-icon {
+    background-color: var(--basic-white);
+}
+.promo-newmark {
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    background-color: var(--basic-red);
+}
+/* Slider */
+.slider-list {
+    color: var(--basic-white);
+    list-style: none;
+}
+.slider-subheader {
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 700;
+}
+.slider-content {
+    background-color: var(--basic-gray);
+}
+.slider-link:hover {
+    background-color: var(--basic-red-dark-extra);
+}
+.slider-link:active {
+    background-color: var(--basic-red-dark-ultra);
 }
