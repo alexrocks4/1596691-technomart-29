@@ -1,6 +1,7 @@
 /******* Variables ******/
 :root {
     --basic-beige: #F9F5F0;
+    --basic-beige-dark: #F7F3EC;
     --basic-black: #000000;
     --basic-blue-light: #3BBCE3;
     --basic-blue-dark-extra: #405069;
@@ -16,20 +17,27 @@
     --basic-red-dark-ultra: #BA2732;
     --basic-gray: #B7BFC8;
     --basic-gray-light: #C5C5C5;
+    --basic-gray-light-100: #C1C6CE;
     --basic-gray-light-extra: #A9A9A9;
+    --basic-gray-light-extra-100: #B5B5B5;
     --basic-gray-light-ultra: #EAEAEA;
+    --basic-gray-light-ultra-50: #F1F1F1;
     --basic-gray-light-ultra-100: #F1F5F7;
+    --basic-gray-light-ultra-150: #F2F6F8;
     --basic-gray-light-ultra-200: #F3F7F9;
+    --basic-gray-light-ultra-300: #E5E5E5;
     --basic-gray-dark: #3D546F;
     --basic-green: #63A63E;
     --basic-green-dark: #367315;
     --basic-green-dark-extra: #518534;
+    --basic-green-dark-ultra: #444444;
     --basic-green-light: #5FBB2D;
     --basic-green-light-extra: #8ED78F;
     --basic-yellow-light: #FFBF47;
     --basic-yellow-light-extra: #FFC047;
     --basic-yellow-light-ultra: #FFD180;
     --basic-white: #FFFFFF;
+    --special-black: rgba(0, 0, 0, 0.3);
     --special-black-extra: rgba(0, 0, 0, 0.15);
     --special-black-ultra: rgba(0, 0, 0, 0.0001);
     --special-dark: rgba(50, 66, 92, 0.5);
@@ -103,6 +111,10 @@ img {
 .button-success:active {
     background-color: var(--basic-green-dark-extra);
 }
+.button-neutral {
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+}
 .button-outline-success {
     color: var(--basic-dark);
     background-color: var(--basic-white);
@@ -130,7 +142,12 @@ img {
     text-transform: uppercase;
     color: var(--basic-white);
     background-color: var(--basic-red);
+    display: none;
 }
+.mark-visible {
+    display: inline-block;
+}
+
 /* Text headers */
 .text-header {
     font-family: "Cuprum", Arial, sans-serif;
@@ -154,6 +171,38 @@ img {
 .text-warning {
     color: var(--basic-yellow-light-ultra);
 }
+/* Basket */
+.basket-not-empty {
+    background-color: var(--basic-red);
+}
+.basket-empty {
+    background-color: transparent;
+}
+/* Pagination */
+.pagination-list li {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.pagination-button {
+    padding: 10px 15px;
+    background-color: var(--basic-white);
+    border: 1px solid var(--basic-gray-light-ultra-300);
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+.pagination-button:hover {
+    border: 1px solid var(--basic-gray-light);
+}
+.pagination-button:active {
+    border: 1px solid var(--basic-red);
+}
+.pagination-button-active {
+    color: var(--basic-white);
+    background-color: var(--basic-red);
+    border: none;
+}
+
 /******* Main header *******/
 .main-header {
     background-color: var(--special-black-ultra);
@@ -214,6 +263,7 @@ img {
 /* Products actions */
 .basket-link:active {
     color: var(--special-white);
+    background-color: transparent;
 }
 .order-link {
     background-color: var(--basic-green);
@@ -432,8 +482,6 @@ img {
     cursor: pointer;
 }
 
-/****** Tehnomart Company  ******/
-
 /****** Contacts  ******/
 .contacts-map {
     background-color: var(--special-black-ultra);
@@ -511,4 +559,188 @@ img {
     border: 2px solid var(--basic-gray-light);
     box-sizing: border-box;
     border-radius: 2px;
+}
+
+/****** Catalog page ******/
+
+/*** Main Header ****/
+.logged-in-actions-list {
+    background-color: var(--special-black-ultra);
+}
+.user-profile-link {
+    font-size: 21px;
+    line-height: 21px;
+    color: var(--basic-black);
+}
+.user-orders-link,
+.personal-account-link {
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--basic-dark);
+}
+.user-icon,
+.logout-icon {
+    background-color: var(--basic-gray-light);
+}
+.user-profile-link:hover .user-icon,
+.logout-link:hover .logout-icon {
+    background-color: var(--basic-gray-dark);
+}
+.user-orders-link:hover,
+.personal-account-link:hover {
+    color: var(--basic-red);
+}
+.user-profile-link:active .user-icon,
+.logout-link:active .logout-icon {
+    background-color: var(--basic-gray-light);
+}
+.user-profile-link:active,
+.user-orders-link:active,
+.personal-account-link:active {
+    color: var(--basic-gray-light);
+}
+
+/****** Catalog page main content ******/
+
+.product-filter,
+.product-sorting,
+.products-pagination,
+.product-filter-header,
+.product-sorting-header {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: var(--basic-black);
+}
+/*** Breadcrumbs ***/
+.breadcrumbs-list {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--basic-black);
+    text-transform: uppercase;
+}
+.home-icon {
+    background-color: var(--basic-gray-light-100);
+}
+
+/*** Catalog page main content header ***/
+.main-content-header {
+    background-color: var(--basic-gray-light-ultra-150);
+}
+
+/*** Catalog page product filter form ***/
+.product-filter-header,
+.price-range-container,
+.price-output,
+.product-sorting {
+    background-color: var(--basic-beige-dark);
+}
+.form-label {
+    font-size: 15px;
+    line-height: 19px;
+}
+.product-filter-subheader {
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: 700;
+}
+.form-fieldset {
+    border: none;
+    border-bottom: 1px solid var(--special-black-ultra);
+}
+.checkbox-image,
+.radio-button-image {
+    background-color: var(--basic-gray-light);
+}
+/* Show/Hide images based on checked status of the input tag*/
+.checkbox[checked] ~ .checkbox-image--unchecked,
+.radio-button[checked] ~ .radio-button-image--unchecked {
+    display: none;
+}
+.checkbox[checked] ~ .checkbox-image--checked,
+.radio-button[checked] ~ .radio-button-image--checked {
+    display: inline-block;
+}
+.checkbox:not([checked]) ~ .checkbox-image--unchecked,
+.radio-button:not([checked]) ~ .radio-button-image--unchecked {
+    display: inline-block;
+}
+.checkbox:not([checked]) ~ .checkbox-image--checked,
+.radio-button:not([checked]) ~ .radio-button-image--checked {
+    display: none;
+}
+.form-label:hover .checkbox-image,
+.form-label:hover .radio-button-image {
+    background-color: var(--basic-gray-light-extra-100);
+}
+.form-label:active .checkbox-image,
+.form-label:active .radio-button-image {
+    opacity: 0.3;
+}
+.form-label:active span {
+    opacity: 0.4;
+}
+.price-output {
+    font-size: 17px;
+    line-height: 18px;
+}
+.price-separator {
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--basic-green-dark-ultra);
+}
+.product-filter-submit-button {
+    font: inherit;
+    font-size: 13px;
+    line-height: 18px;
+    background-color: var(--basic-white);
+    border: 1px solid var(--basic-gray-light-ultra-300);
+    box-sizing: border-box;
+}
+
+/*** Product sorting block ***/
+.product-sorting-button {
+    font: inherit;
+    text-transform: uppercase;
+    border: none;
+    color: var(--special-black);
+}
+.product-sorting-button svg{
+    background-color: var(--basic-red);
+}
+.product-sorting-button--active {
+    color: var(--basic-red);
+}
+.product-sorting-button--active svg {
+    display: none;
+}
+.product-sorting-button:hover {
+    color: var(--basic-black);
+}
+.product-sorting-direction-button {
+    border: none;
+    background-color: var(--special-black);
+}
+.product-sorting-direction-button--active {
+    background-color: var(--basic-red);
+}
+.product-sorting-direction-button:hover {
+    background-color: var(--basic-black);
+}
+
+/*** Product description ***/
+.product-description {
+    background-color: var(--basic-gray-light-ultra-100);
+}
+
+/*** Catalog page Add product to the basket modal */
+.to-basket-modal {
+    background-color: var(--basic-white);
+}
+.to-basket-modal-footer {
+    background-color: var(--basic-gray-light-ultra-50);
 }
