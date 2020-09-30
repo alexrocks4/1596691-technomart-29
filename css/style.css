@@ -571,6 +571,7 @@ img {
     font-size: 21px;
     line-height: 21px;
     color: var(--basic-black);
+    background-color: var(--basic-white);
 }
 .user-orders-link,
 .personal-account-link {
