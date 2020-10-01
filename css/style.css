@@ -225,12 +225,21 @@ img {
     background-color: var(--special-white-extra);
 }
 /* Logo */
-.main-header-logo {
+.main-logo {
+    display: inline-block;
     background-color: var(--basic-red);
+    box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+}
+.main-header-logo {
     cursor: pointer;
+    width: 220px;
+    height: 47px;
 }
 .main-header-logo:active {
     background-color: var(--basic-red-dark);
+}
+.main-header-logo img {
+    padding: 12px 57px 17px 55px;
 }
 /* Search */
 .search-form-input {
@@ -496,7 +505,12 @@ img {
     background-color: var(--basic-dark-extra);
 }
 .main-footer-logo {
+    width: 220px;
+    height: 68px;
     background-color: var(--basic-red);
+}
+.main-footer-logo img {
+    padding: 20px 41px 25px 41px;
 }
 .main-footer-nav-list {
     color: var(--basic-gray-light-ultra-100);
