@@ -100,10 +100,16 @@ img {
     overflow: hidden;
   }
 .index-columns {
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
     row-gap: 20px;
     column-gap: 20px;
     margin-bottom: 70px;
+}
+.index-columns-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1 / -1;
 }
 /* Buttons */
 .button {
@@ -567,6 +573,17 @@ img {
 /*** Popular products block ***/
 .block-header-container {
     background-color: var(--basic-beige);
+    padding-left: 28px;
+    padding-right: 14px;
+    height: 89px;
+}
+.block-header-text{
+    align-self: center;
+    justify-self: start;
+}
+.block-header-link {
+    align-self: center;
+    justify-self: end;
 }
 /* Product card */
 .product-card {
@@ -601,10 +618,20 @@ img {
 }
 
 /****** Popular brands ******/
+.brands-list {
+    display: contents;
+    padding: 0;
+    margin: 0;
+}
 .brands-link {
+    display: grid;
+    align-content: center;
+    justify-content: center;
     background-color: var(--basic-white);
     border: 1px solid var(--basic-gray-light-ultra);
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    width: 220px;
+    height: 145px;
 }
 .brands-link:hover {
     filter: drop-shadow(0px 4px 20px var(--special-black-extra));
@@ -614,19 +641,47 @@ img {
 }
 
 /****** Services ******/
-.services {
+.services-wrapper {
     background-color: var(--basic-gray-light-ultra-100);
 }
-.services-header{
-    font-family: "Cuprum", Arial, sans-serif;
-    font-size: 30px;
-    line-height: 30px;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: var(--basic-black);
+.services {
+    height: 522px;
+    padding-top: 64px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(3, min-content);
+}
+.services-header {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 25px;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
 }
 .services-subheader {
-    color: var(--basic-dark);
+    padding: 0;
+    margin: 0;
+}
+.services > p {
+    width: 394px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 70px;
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+}
+.services-menu {
+    padding: 0;
+    margin: 0;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    justify-self: start;
+}
+.services-delivery,
+.services-guarantee,
+.services-credit {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
 }
 .services-menu-item {
     font-family: "Cuprum", Arial, sans-serif;
@@ -645,6 +700,9 @@ img {
 .services-menu-item:not(.services-menu-active):hover {
     background-color: var(--basic-dark-extra);
     cursor: pointer;
+}
+.services-item:not(.services-item-active) {
+    display: none;
 }
 
 /****** Contacts  ******/
