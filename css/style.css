@@ -115,6 +115,16 @@ img {
 .button:focus {
     outline: none;
 }
+.button-default {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.button-default:focus {
+    outline: none;
+}
 .button-danger {
     color: var(--basic-white);
     background-color: var(--basic-red);
@@ -424,13 +434,7 @@ img {
     color: var(--basic-white);
     padding: 0;
     margin: 0;
-    display: grid;
-    grid-template-columns: repeat(3, 300px);
-    grid-template-rows: repeat(3, 123px);
-    column-gap: 20px;
-    row-gap: 20px;
-    grid-column: 1 / -1;
-    grid-row: 1 / -1;
+    display: contents;
 }
 .promo-materials {
     background-color: var(--basic-yellow-light);
@@ -482,7 +486,7 @@ img {
 .slider {
     display: grid;
     grid-template-columns: 620px;
-    grid-template-rows: repeat(3, min-content) ;
+    grid-template-rows: 104px 81px 81px ;
     grid-column: 1 / 3;
     grid-row: 2 / 4;
 }
@@ -490,6 +494,20 @@ img {
     color: var(--basic-white);
     padding: 0;
     margin: 0;
+    display: contents;
+}
+.slider-item {
+    display: grid;
+    grid-template-columns: 620px;
+    grid-template-rows: 104px 162px ;
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+}
+.slider-item:first-child {
+    z-index: 1;
+}
+.slider-item-text-wrapper {
+    order: 1;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
 }
@@ -501,26 +519,44 @@ img {
 }
 .slider-content {
     background-color: var(--basic-gray);
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
 }
-.slider-back-button,
-.slider-forward-button {
+.slider-buttons-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-column: 1 / 2;
     grid-row: 2/ 3;
+    z-index: 2;
+}
+.slider-back-button {
+    justify-self : start;
+}
+.slider-forward-button {
+    justify-self : end;
+}
+.slider-forward-button,
+.slider-back-button {
+    width: 22px;
+    height: 40px;
+}
+.slider-forward-button:hover,
+.slider-back-button:hover {
+    opacity: 0.7;
+}
+.slider-forward-button:active,
+.slider-back-button:active {
+    opacity: 0.5;
+}
+.slider-footer-wrapper {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
     z-index: 2;
 }
 .slider-link {
     font-size: 14px;
     line-height: 18px;
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
-    z-index: 2;
 }
-.slider-switch {
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
-    z-index: 2;
-}
-
 /*** Popular products block ***/
 .block-header-container {
     background-color: var(--basic-beige);
