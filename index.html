@@ -10,81 +10,87 @@
   </head>
   <body class="page-body">
     <header class="main-header">
-      <div class="submenu">
-        <!--Логотип-->
-        <a class="main-logo main-header-logo">
-          <img src="img/logo-technomart.svg" width="108" height="18" alt="Логотип компании ТЕХНОМАРТ. Надпись ТЕХНОМАРТ белыми буквами на ярко-красном фоне.">
-        </a>
-        <!--Поиск-->
-        <form class="search-form" action="#" method="get">
-          <label class="visually-hidden" for="search-string">Поиск: </label>
-          <svg class="submenu-icon search-form-icon" tabindex="-1" width="17" height="17"></svg>
-          <input class="search-form-input" type="text" id="search-string" name="search-string" placeholder="Поиск:">
-        </form>
-        <!--Закладки-->
-        <button class="button bookmark-button" type="button">
-          <svg class="submenu-icon " tabindex="-1" width="14" height="16"></svg> Закладки: 0
-        </button>
-        <!--Корзина и Оформление заказа-->
-        <ul class="list products-actions-list">
-          <li class="products-actions-item">
-            <a class="basket-link basket-empty" href="">
-              <svg class="submenu-icon" tabindex="-1" width="15" height="15"></svg> Корзина: 0
+      <div class="submenu-wrapper">
+        <div class="container submenu">
+          <!--Логотип-->
+          <a class="main-logo main-header-logo">
+            <img src="img/logo-technomart.svg" width="108" height="18" alt="Логотип компании ТЕХНОМАРТ. Надпись ТЕХНОМАРТ белыми буквами на ярко-красном фоне.">
+          </a>
+          <!--Поиск-->
+          <form class="search-form" action="#" method="get">
+            <label class="visually-hidden" for="search-string">Поиск: </label>
+            <svg class="submenu-icon search-form-icon" tabindex="-1" width="17" height="17"></svg>
+            <input class="search-form-input" type="text" id="search-string" name="search-string" placeholder="Поиск:">
+          </form>
+          <!--Закладки-->
+          <button class="button bookmark-button" type="button">
+            <svg class="submenu-icon " tabindex="-1" width="14" height="16"></svg> Закладки: 0
+          </button>
+          <!--Корзина и Оформление заказа-->
+          <ul class="list products-actions-list">
+            <li class="products-actions-item">
+              <a class="basket-link basket-empty" href="">
+                <svg class="submenu-icon" tabindex="-1" width="15" height="15"></svg> Корзина: 0
+              </a>
+            </li>
+            <li class="products-actions-item">
+              <a class="order-link" href="">Оформить заказ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container main-header-main-content">
+        <p class="main-header-text">
+          <i>Интернет-магазин 
+            строительных материалов 
+            и инструментов для ремонта</i>
+        </p>
+        <!--Контакты-->
+        <div class="main-header-contacts-wrapper">
+          <address class="contact-phone">
+            <svg class="phone-icon" width="19" height="19"></svg>
+            <a class="contact-phone-link" href="tel:+78125550555">+7 (812) 555-05-55</a>
+          </address>
+          <address class="contact-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+        </div>
+        <ul class="list authentication-actions-list">
+          <li class="authentication-actions-item">
+            <a class="login-link" href="">
+              <svg class="login-icon" width="15" height="15"></svg>
+              Войти
             </a>
           </li>
-          <li class="products-actions-item">
-            <a class="order-link" href="">Оформить заказ</a>
+          <li class="authentication-actions-item">
+            <a class="registration-link" href="">Регистрация</a>
           </li>
         </ul>
+        <!--Главная навигация-->
+        <nav class="main-navigation">
+          <ul class="list main-navigation-list">
+            <li>
+              <a>Главная</a>
+            </li>
+            <li>
+              <a class="main-navigation-link" href="">Компания</a>
+            </li>
+            <li>
+              <a class="main-navigation-link" href="catalog.html">Каталог</a>
+            </li>
+            <li>
+              <a class="main-navigation-link" href="">Новости</a>
+            </li>
+            <li>
+              <a class="main-navigation-link" href="">Спецпредложения</a>
+            </li>
+            <li>
+              <a class="main-navigation-link" href="">Доставка</a>
+            </li>
+            <li>
+              <a class="main-navigation-link" href="">Контакты</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <p class="main-header-text">
-        <i>Интернет-магазин 
-          строительных материалов 
-          и инструментов для ремонта</i>
-      </p>
-      <!--Контакты-->
-      <address class="contact-phone">
-        <svg class="phone-icon" width="19" height="19"></svg>
-        <a class="contact-phone-link" href="tel:+78125550555">+7 (812) 555-05-55</a>
-      </address>
-      <address class="contact-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
-      <ul class="list authentication-actions-list">
-        <li class="authentication-actions-item">
-          <a class="login-link" href="">
-            <svg class="login-icon" width="15" height="15"></svg>
-            Войти
-          </a>
-        </li>
-        <li class="authentication-actions-item">
-          <a class="registration-link" href="">Регистрация</a>
-        </li>
-      </ul>
-      <!--Главная навигация-->
-      <nav class="main-navigation">
-        <ul class="list main-navigation-list">
-          <li>
-            <a>Главная</a>
-          </li>
-          <li>
-            <a class="main-navigation-link" href="">Компания</a>
-          </li>
-          <li>
-            <a class="main-navigation-link" href="catalog.html">Каталог</a>
-          </li>
-          <li>
-            <a class="main-navigation-link" href="">Новости</a>
-          </li>
-          <li>
-            <a class="main-navigation-link" href="">Спецпредложения</a>
-          </li>
-          <li>
-            <a class="main-navigation-link" href="">Доставка</a>
-          </li>
-          <li>
-            <a class="main-navigation-link" href="">Контакты</a>
-          </li>
-        </ul>
-      </nav>
     </header>
     <main class="container">
       <h1 class="visually-hidden">Интернет-магазин Техномарт</h1>
@@ -128,9 +134,9 @@
           </ul>
           <a class="button button-danger slider-link" href="catalog.html">Открыть каталог</a>
           <!--Кнопка назад-->
-          <button class="slider-back-button" type="button"></button>
+          <button class="slider-back-button" type="button">111</button>
           <!--Кнопка вперед-->
-          <button class="slider-forward-button" type="button"></button>
+          <button class="slider-forward-button" type="button">111</button>
           <!--Кнопка переключения-->
           <input class="slider-switch" type="radio" name="slide-switch">
           <!--Кнопка переключения-->
