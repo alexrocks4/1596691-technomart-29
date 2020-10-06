@@ -73,11 +73,25 @@ img {
 .page {
     height: 100%;
 }
+/* Grid */
 .page-body {
     min-height: 100%;
     display: grid;
     grid-template-rows: min-content 1fr min-content;
     align-content: start; 
+}
+.page-catalog-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, min-content);
+    grid-template-areas: 
+        "breadcrumbs breadcrumbs breadcrumbs breadcrumbs"
+        "header      header      header      header"
+        "filter      sort        sort        sort"
+        "filter      products    products    products"
+        ".           pagination  pagination  pagination";
+    column-gap: 20px;
+
 }
 .container {
     width: 940px;
@@ -873,6 +887,8 @@ img {
 /*** Main Header ****/
 .logged-in-actions-list {
     background-color: var(--special-black-ultra);
+    padding: 0;
+    margin: 0;
 }
 .user-profile-link {
     font-size: 21px;
@@ -930,6 +946,9 @@ img {
     line-height: 18px;
     color: var(--basic-black);
     text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    grid-area: breadcrumbs;
 }
 .home-icon {
     background-color: var(--basic-gray-light-100);
@@ -938,9 +957,13 @@ img {
 /*** Catalog page main content header ***/
 .main-content-header {
     background-color: var(--basic-gray-light-ultra-150);
+    grid-area: header;
 }
 
 /*** Catalog page product filter form ***/
+.product-filter {
+    grid-area: filter;
+}
 .product-filter-header,
 .price-range-container,
 .price-output,
@@ -1011,6 +1034,9 @@ img {
 }
 
 /*** Product sorting block ***/
+.product-sorting {
+    grid-area: sort;
+}
 .product-sorting-button {
     font: inherit;
     text-transform: uppercase;
@@ -1039,10 +1065,23 @@ img {
 .product-sorting-direction-button:hover {
     background-color: var(--basic-black);
 }
+/*** Products chosen block ***/
+.chosen-products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 18px;
+    grid-area: products;
 
+}
+/*** Product pagination ***/
+.products-pagination {
+    grid-area: pagination;
+}
 /*** Product description ***/
-.product-description {
+.product-description-wrapper {
     background-color: var(--basic-gray-light-ultra-100);
+    
 }
 
 /*** Catalog page Add product to the basket modal */
