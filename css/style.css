@@ -91,7 +91,6 @@ img {
         "filter      products    products    products"
         ".           pagination  pagination  pagination";
     column-gap: 20px;
-
 }
 .container {
     width: 940px;
@@ -958,6 +957,7 @@ img {
 .main-content-header {
     background-color: var(--basic-gray-light-ultra-150);
     grid-area: header;
+    margin-bottom: 20px;
 }
 
 /*** Catalog page product filter form ***/
@@ -1036,6 +1036,7 @@ img {
 /*** Product sorting block ***/
 .product-sorting {
     grid-area: sort;
+    margin-bottom: 28px;
 }
 .product-sorting-button {
     font: inherit;
@@ -1072,16 +1073,33 @@ img {
     column-gap: 20px;
     row-gap: 18px;
     grid-area: products;
+    margin-bottom: 48px;
 
 }
 /*** Product pagination ***/
 .products-pagination {
     grid-area: pagination;
+    margin-bottom: 59px;
+}
+.pagination-list {
+    padding: 0;
+    margin: 0;
 }
 /*** Product description ***/
 .product-description-wrapper {
     background-color: var(--basic-gray-light-ultra-100);
     
+}
+.product-description h2 {
+    padding: 0;
+    padding-top: 64px;
+    margin: 0;
+    margin-bottom: 25px;
+}
+.product-description p {
+    padding: 0;
+    padding-bottom: 68px;
+    margin: 0;
 }
 
 /*** Catalog page Add product to the basket modal */
