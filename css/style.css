@@ -886,6 +886,8 @@ img {
 /*** Main Header ****/
 .logged-in-actions-list {
     background-color: var(--special-black-ultra);
+    display: grid;
+    grid-template-columns: auto auto;
     padding: 0;
     margin: 0;
 }
