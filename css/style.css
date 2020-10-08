@@ -319,12 +319,24 @@ img {
     padding: 12px 57px 17px 55px;
 }
 /* Search */
+.search-form {
+    flex-grow: 1;
+    display: flex;
+    height: 42px;
+    min-width: 270px;
+}
 .search-form-input {
+    padding: 0;
+    margin: 0;
+    color: var(--basic-white);
     background-color: var(--basic-dark-extra);
     border: none;
     font: inherit;
+    flex-grow: 1;
+    order: 2;
 }
 .search-form-input:focus {
+    color: var(--basic-black);
     background-color: var(--basic-white);
     outline: none;
 }
@@ -334,17 +346,36 @@ img {
 .search-form-input::placeholder {
     color: var(--basic-white);
 }
+.search-form-icon {
+    align-self: center;
+    margin-left: 18px;
+    margin-right: 8px;
+}
+.search-form-input:focus ~ .search-form-icon {
+    background-color: var(--basic-red);
+    fill: var(--basic-red);
+}
 /* Bookmark */
 .bookmark-button {
+    padding: 0;
+    margin: 0;
     font-size: 18px;
     line-height: 24px;
     color: var(--basic-white);
     text-transform: none;
     background-color: transparent;
+    width: 150px;
+    min-height: 42px;
+    display: flex;
+    align-items: center;
 }
 .bookmark-button:active {
     color: var(--special-white);
     background-color: var(--basic-dark-ultra);
+}
+.bookmark-button svg {
+    margin-left: 20px;
+    margin-right: 9px;
 }
 /* Products actions */
 .products-actions-list {
