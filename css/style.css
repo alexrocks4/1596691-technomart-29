@@ -274,9 +274,10 @@ img {
     color: var(--basic-white);
 }
 .submenu {
-    display: grid;
-    grid-template-columns: 220px 270px 150px 1fr;
-    grid-template-rows: 42px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    min-height: 42px;
 }
 .main-header-main-content {
     display: grid;
@@ -307,7 +308,9 @@ img {
 .main-header-logo {
     cursor: pointer;
     width: 220px;
-    height: 47px;
+    height: 42px;
+    padding-bottom: 5px;
+    margin-bottom: -5px;
 }
 .main-header-logo:active {
     background-color: var(--basic-red-dark);
