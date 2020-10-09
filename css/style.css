@@ -414,7 +414,7 @@ img {
 .main-header-main-content {
     display: grid;
     grid-template-columns: 300px 300px 300px;
-    grid-template-rows: minmax(158px, auto) auto;
+    grid-template-rows: minmax(158px, auto) minmax(60px, auto);
     column-gap: 20px;
     grid-template-areas: 
         "text contacts actions"
@@ -504,7 +504,7 @@ img {
 .registration-link {
     box-sizing: border-box;
     background-color: var(--basic-white);
-    word-wrap: break-word;
+    word-break: break-all;
     min-height: 45px;
     display: flex;
     align-items: center;
@@ -544,23 +544,27 @@ img {
     color: var(--basic-white);
     grid-area: nav;
     padding: 0;
+    padding-left: 25px;
+    padding-right: 25px;
     margin: 0;
-    padding-left: 30px;
-    padding-right: 30px;
 }
 .main-navigation-list {
     padding: 0;
     margin: 0;
-    margin-right: -56px;
     display: flex;
     flex-wrap: wrap;
 }
 .main-navigation-link {
+    text-align: center;
+    box-sizing: border-box;
+    word-break: break-all;
+    min-width: 111px;
+    max-width: 184px;
     display: flex;
     padding-top: 16px;
-    padding-right: 23px;
+    padding-right: 28px;
     padding-bottom: 20px;
-    padding-left: 23px;
+    padding-left: 28px;
 }
 .main-navigation-link:hover {
     background-color: var(--basic-dark-extra);
