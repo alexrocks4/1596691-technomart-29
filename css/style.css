@@ -267,6 +267,7 @@ img {
 /******* Main header *******/
 .main-header {
     background-color: var(--special-black-ultra);
+    background-image: url("../img/main-header-background.png");
     padding-bottom: 60px;
 }
 .submenu-wrapper {
@@ -278,13 +279,6 @@ img {
     flex-wrap: wrap;
     align-items: flex-start;
     min-height: 42px;
-}
-.main-header-main-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 
-        "text contacts actions"
-        "nav nav nav";
 }
 .submenu-icon {
     background-color: var(--special-white-extra);
@@ -379,10 +373,20 @@ img {
 }
 /* Products actions */
 .products-actions-list {
-    display: grid;
-    grid-template-columns: 136px 150px;
+    display: flex;
+    align-items: start;
     padding: 0;
     margin: 0;
+}
+.products-actions-item {
+    display: flex;
+    align-items: start;
+}
+.basket-link {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    min-height: 42px;
 }
 .basket-link:active {
     color: var(--special-white);
@@ -390,6 +394,11 @@ img {
 }
 .order-link {
     background-color: var(--basic-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    min-height: 42px;
 }
 .order-link:hover {
     background-color: var(--basic-green-light);
@@ -397,24 +406,63 @@ img {
 .order-link:active {
     color: var(--special-white);
 }
+.basket-link svg {
+    margin-left: 26px;
+    margin-right: 8px;;
+}
+/*** Main header main content block ***/
+.main-header-main-content {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: minmax(158px, auto) auto;
+    column-gap: 20px;
+    grid-template-areas: 
+        "text contacts actions"
+        "nav nav nav";
+}
 /* Main header text */
 .main-header-text {
     font-size: 16px;
     line-height: 23px;
     color: var(--basic-red);
+    width: 197px;
     padding: 0;
     margin: 0;
+    margin-top: 42.5px;
+    margin-left: 30px;
     grid-area: text;
 }
 /* Contacts */
 .main-header-contacts-wrapper {
     grid-area: contacts;
+    margin-top: 46px;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    
 }
 .contact-phone {
     font-style: inherit;
     border: 3px solid var(--basic-white);
     padding: 0;
     margin: 0;
+    margin-bottom: 3px;
+    box-sizing: border-box;
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+
+}
+.contact-phone::before {
+    content: "";
+    width: 19px;
+    height: 19px;
+    margin-left: 36px;
+    margin-right: 16px;
+    background-image: url("../img/icons/icon-phone.svg");
+}
+.contact-address {
+    align-self: center;
 }
 .phone-icon {
     background-color: var(--main-header-gray);
@@ -439,11 +487,39 @@ img {
     line-height: 21px;
     padding: 0;
     margin: 0;
+    margin-top: 46px;
+    margin-right: -10px;
     grid-area: actions;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+.login-link svg {
+    margin-left: 19px;
+    margin-right: 6px;
 }
 .login-link,
 .registration-link {
-    background-color: var(--basic-white)
+    box-sizing: border-box;
+    background-color: var(--basic-white);
+    word-wrap: break-word;
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    min-width: 121px;
+    max-width: 300px;
+}
+.login-link {
+    justify-content: flex-start;
+}
+.registration-link {
+    padding-right: 24px;
+    padding-left: 24px;
 }
 .login-icon {
     background-color: var(--basic-gray-light);
@@ -467,6 +543,24 @@ img {
     background-color: var(--basic-dark);
     color: var(--basic-white);
     grid-area: nav;
+    padding: 0;
+    margin: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.main-navigation-list {
+    padding: 0;
+    margin: 0;
+    margin-right: -56px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.main-navigation-link {
+    display: flex;
+    padding-top: 16px;
+    padding-right: 23px;
+    padding-bottom: 20px;
+    padding-left: 23px;
 }
 .main-navigation-link:hover {
     background-color: var(--basic-dark-extra);
@@ -474,10 +568,6 @@ img {
 .main-navigation-link:active {
     background-color: var(--basic-dark-ultra-100);
     color: var(--special-white);
-}
-.main-navigation-list {
-    padding: 0;
-    margin: 0;
 }
 /******* Index page main content *******/
 
