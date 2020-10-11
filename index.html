@@ -103,24 +103,35 @@
           <h2 class="visually-hidden">Товары и услуги</h2>
           <ul class="list promo-list">
             <li class="promo-item promo-materials">
-              <b class="promo-subheader">Материалы </b><a class="promo-link" href="">На любой вкус</a> <span class="mark">New</span>
-              <svg class="promo-icon" width="44" height="65"></svg>
+              <div class="promo-item-wrapper">
+                <b class="promo-subheader">Материалы</b>
+                <a class="promo-link" href="">На любой вкус</a>
+              </div>
+              <span class="mark mark-visible">New</span>
             </li>
             <li class="promo-item promo-tools">
-              <b class="promo-subheader">Инструменты </b><a class="promo-link" href="">На все случаи жизни</a>
-              <svg class="promo-icon" width="75" height="61"></svg>
+              <div class="promo-item-wrapper">
+                <b class="promo-subheader">Инструменты </b>
+                <a class="promo-link" href="">На все случаи</a>
+              </div>
             </li>
             <li class="promo-item promo-constructing">
-              <b class="promo-subheader">Техника </b><a class="promo-link" href="">Для стройки</a>
-              <svg class="promo-icon" width="78" height="62"></svg>
+              <div class="promo-item-wrapper">
+                <b class="promo-subheader">Техника </b>
+                <a class="promo-link" href="">Для стройки</a>
+              </div>
             </li>
             <li class="promo-item promo-discounts">
-              <b class="promo-subheader">Скидки 50% </b><a class="promo-link" href="">На 350 товаров</a>
-              <svg class="promo-icon" width="59" height="72"></svg>
+              <div class="promo-item-wrapper">
+                <b class="promo-subheader">Скидки 50% </b>
+                <a class="promo-link" href="">На 350 товаров</a>
+              </div>
             </li>
             <li class="promo-item promo-delivery">
-              <b class="promo-subheader">Доставка </b><a class="promo-link" href="">Бесплатно</a>
-              <svg class="promo-icon" width="78" height="63"></svg>
+              <div class="promo-item-wrapper">
+                <b class="promo-subheader">Доставка </b>
+                <a class="promo-link" href="">Бесплатно</a>
+              </div>
             </li>
           </ul>
           <section class="slider">
@@ -167,12 +178,14 @@
       </div>
       <div class="container popular-products-container">
         <section class="popular-products index-columns">
-          <div class="block-header-container index-columns-header">
+          <div class="block-header-container">
             <h2 class="text-header text-header-primary block-header-text">Популярные товары:</h2>
             <a class="button button-danger block-header-link" href="">Все популярные товары</a>
           </div>
-          <section class="product-card">
-            <img class="product-card-image" src="img/perforator-bosch-bfg9000.png" width="184" height="164" alt="Перфоратор серо-синего цвета в собранном виде с длинным сверлом на светлом фоне.">
+          <section class="product-card card-bfg9000">
+            <div class="product-card-image-container">
+              <img class="product-card-image" src="img/perforator-bosch-bfg9000.png" width="184" height="164" alt="Перфоратор серо-синего цвета в собранном виде с длинным сверлом на светлом фоне.">
+            </div>
             <ul class="list product-actions-list">
               <li class="product-actions-item">
                 <button class="button button-success product-actions-buy" type="button">
@@ -188,8 +201,10 @@
             <del class="product-card-old-price">32500 Р.</del>
             <a class="product-card-price" href="">25500 Р.</a>
           </section>
-          <section class="product-card">
-            <img class="product-card-image" src="img/perforator-bosch-bfg3000.png" width="127" height="112" alt="Перфоратор черно-синего цвета в собранном виде со средним сверлом на светлом фоне">
+          <section class="product-card card-bfg3000">
+            <div class="product-card-image-container">
+              <img class="product-card-image" src="img/perforator-bosch-bfg3000.png" width="127" height="112" alt="Перфоратор черно-синего цвета в собранном виде со средним сверлом на светлом фоне">
+            </div>
             <ul class="list product-actions-list">
               <li class="product-actions-item">
                 <button class="button button-success product-actions-buy" type="button">
@@ -206,8 +221,10 @@
             <a class="product-card-price" href="">15500 Р.</a>
             <b class="mark">New</b>
           </section>
-          <section class="product-card">
-            <img class="product-card-image" src="img/perforator-bosch-bfg6000.png" width="144" height="128" alt="Перфоратор черно-синего цвета в собранном виде со средним сверлом, c измерителем глубины сверления на светлом фоне.">
+          <section class="product-card card-bfg6000">
+            <div class="product-card-image-container">
+              <img class="product-card-image" src="img/perforator-bosch-bfg6000.png" width="144" height="128" alt="Перфоратор черно-синего цвета в собранном виде со средним сверлом, c измерителем глубины сверления на светлом фоне.">
+            </div>
             <ul class="list product-actions-list">
               <li class="product-actions-item">
                 <button class="button button-success product-actions-buy" type="button">
@@ -221,10 +238,12 @@
             </ul>
             <h3 class="product-card-name">Перфоратор BOSCH BFG 6000</h3>
             <del class="product-card-old-price">30500 Р.</del>
-            <a href="">25500 Р.</a>
+            <a class="product-card-price" href="">25500 Р.</a>
           </section>
-          <section class="product-card">
-            <img class="product-card-image" src="img/perforator-bosch-bfg2000.png" width="127" height="112" alt="Перфоратор черно-синего цвета в собранном виде со средним сверлом на светлом фоне">
+          <section class="product-card card-bfg2000">
+            <div class="product-card-image-container">
+              <img class="product-card-image" src="img/perforator-bosch-bfg2000.png" width="127" height="112" alt="Перфоратор черно-синего цвета в собранном виде со средним сверлом на светлом фоне">
+            </div>
             <ul class="list product-actions-list">
               <li class="product-actions-item">
                 <button class="button button-success product-actions-buy" type="button">
@@ -244,7 +263,7 @@
       </div>
       <div class="container brands-container">
         <section class="brands index-columns">
-          <div class="block-header-container index-columns-header">
+          <div class="block-header-container">
             <h2 class="text-header text-header-primary block-header-text">Популярные производители:</h2>
             <a class="button button-danger block-header-link" href="">Все производители</a>
           </div>
@@ -255,27 +274,27 @@
               </a>
             </li>
             <li class="brands-item">
-              <a class="brands-link" href="">
+              <a class="brands-link brands-makita" href="">
                 <img src="img/logo-makita.png" width="123" height="40" alt="Логотип компании MAKITA. Надпись MAKITA белыми буквами на красном фоне.">
               </a>
             </li>
             <li class="brands-item">
-              <a class="brands-link" href="">
+              <a class="brands-link brands-dewalt" href="">
                 <img src="img/logo-dewalt.png" width="146" height="44" alt="Логотип компании DeWALT. Надпись DeWALT зелеными буквами на черном фоне.">
               </a>
             </li>
             <li class="brands-item">
-              <a class="brands-link" href="">
+              <a class="brands-link brands-iterskol" href="">
                 <img src="img/logo-interskol.png" width="200" height="75" alt="Логотип компании ИНТЕРСКОЛ. Надпись ИНТЕРСКОЛ красными буквами на белом фоне.">
               </a>
             </li>
             <li class="brands-item">
-              <a class="brands-link" href="">
+              <a class="brands-link brands-hitachi" href="">
                 <img src="img/logo-hitachi.png" width="169" height="31" alt="Логотип компании HITACHI. Надпись HITACHI красными буквами на белом фоне.">
               </a>
             </li>
             <li class="brands-item">
-              <a class="brands-link" href="">
+              <a class="brands-link brands-lg" href="">
                 <img src="img/logo-lg.png" width="121" height="73" alt="Логотип компании LG. Слева значок в виде красного круга с буквами LG белого цвета. Справа - буквы LG черного цвета на белом фоне.">
               </a>
             </li>
@@ -285,7 +304,7 @@
               </a>
             </li>
             <li class="brands-item">
-              <a class="brands-link" href="">
+              <a class="brands-link brands-metabo" href="">
                 <img src="img/logo-metabo.png" width="204" height="69" alt="Логотип компании METABO. Вверху - надпись METABO большими темно-серыми буквами. Внизу - надпись work. dont play. черными буквами меньшего размера.">
               </a>
             </li>
