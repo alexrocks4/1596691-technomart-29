@@ -1188,7 +1188,7 @@ img {
 .main-footer-primary-content {
     min-height: 193px;
     display: grid;
-    grid-template-columns: 321px 1fr;
+    grid-template-columns: 325px 1fr;
     grid-template-rows: 68px min-content;
     grid-template-areas: 
         "logo     links"
