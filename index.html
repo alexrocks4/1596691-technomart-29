@@ -352,22 +352,20 @@
       <div class="container about-container">
         <section class="about-company">
           <h2 class="text-header about-company-header">КОМПАНИЯ «Техномарт»</h2>
-          <div class="about-company-content-wrapper">
-            <p class="text-content">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для
-              ремонта и строительства не оставит равнодушными любителей сэкономить на
-              гастарбайтерах.
-            </p>
-            <p class="text-content">
-              Мы можем доставить ваш товар в самые отдаленные точки России!
-              Техномарт работает со многими транспортными компаниями:
-            </p>
-            <ul class="list about-company-list">
-              <li>Деловые линии</li>
-              <li>Автотрейдинг</li>
-              <li>ЖелДорЭкспедиция</li>
-            </ul>
-          </div>  
-          <a class="button button-danger about-company-footer" href="">Подробнее о компании</a>
+          <p class="text-content">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для
+            ремонта и строительства не оставит равнодушными любителей сэкономить на
+            гастарбайтерах.
+          </p>
+          <p class="text-content">
+            Мы можем доставить ваш товар в самые отдаленные точки России!
+            Техномарт работает со многими транспортными компаниями:
+          </p>
+          <ul class="list about-company-list">
+            <li>Деловые линии</li>
+            <li>Автотрейдинг</li>
+            <li>ЖелДорЭкспедиция</li>
+          </ul>
+          <a class="button button-danger" href="">Подробнее о компании</a>
         </section>
         <section class="contacts">
           <h2 class="text-header contacts-header">Контакты</h2>
@@ -378,9 +376,7 @@
               <img src="img/map-preview.png" width="300" height="158" alt="Карта офиса по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8+7 (812) 555-05-55">
             </a>
           </div>
-          <p class="contacts-footer">
-            <a class="button button-danger" href="">Заблудились? НАПИШИТЕ НАМ!</a>
-          </p>
+          <a class="button button-danger" href="">Заблудились? НАПИШИТЕ НАМ!</a>
         </section>
       </div>
     </main>
@@ -468,25 +464,41 @@
     </footer>
     <section class="modal write-us-modal">
       <h2 class="visually-hidden">Напишите нам</h2>
-      <!--Здесь будет форма отправки сообщения-->
-      <form action="#" method="POST">
-        <label for="name">
-          Ваше имя: <input type="text" name="name" id="name" placeholder="Имя Фамилия">
-        </label>
-        <label for="email">
-          Ваш e-mail: <input type="email" name="email" id="email" placeholder="email@example.com">
-        </label>
-        <label for="message">
-          Текст письма: <textarea name="message" id="message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
-        </label>
-        <button class="button button-danger" type="submit">Отправить</button>
+      <form class="write-us-modal-form" action="#" method="POST">
+        <div class="write-us-modal-container write-us-modal-content">
+          <p class="write-us-modal-item">
+            <label for="name">Ваше имя: </label>
+            <input type="text" name="name" id="name" placeholder="Имя Фамилия">
+          </p>
+          <p class="write-us-modal-item">
+            <label for="email">Ваш e-mail: </label>
+            <input type="email" name="email" id="email" placeholder="email@example.com">
+          </p>
+          <p class="write-us-modal-item">
+            <label for="message">Текст письма: </label>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+          </p>
+        </div>
+        <div class="write-us-modal-footer-wrapper">
+          <div class="write-us-modal-container">
+            <button class="button button-danger write-us-modal-submit" type="submit">Отправить</button>
+          </div>
+        </div>
       </form>
-      <button class="button button-danger" type="button">Закрыть</button>
+      <button class="button-close-modal" type="button">
+        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.273 10.5L20.695 3.07799C21.084 2.68899 21.084 2.05299 20.695 1.66399L19.336 0.304995C18.947 -0.0840054 18.311 -0.0840054 17.922 0.304995L10.5 7.72699L3.07799 0.304995C2.68899 -0.0840054 2.05299 -0.0840054 1.66399 0.304995L0.304995 1.66399C-0.0840054 2.05299 -0.0840054 2.68899 0.304995 3.07799L7.72699 10.5L0.305995 17.922C-0.0830054 18.311 -0.0830054 18.947 0.305995 19.336L1.66499 20.695C2.05399 21.084 2.68999 21.084 3.07899 20.695L10.501 13.273L17.923 20.695C18.312 21.084 18.948 21.084 19.337 20.695L20.696 19.336C21.085 18.947 21.085 18.311 20.696 17.922L13.273 10.5Z" fill="#EE3643"/>
+        </svg>
+      </button>
     </section>
-    <section class="modal">
+    <section class="modal map-modal">
       <h2 class="visually-hidden">Наше местоположение</h2>
       <img src="img/map-popup-map-expanded.png" width="943" height="449" alt="Карта с адресом нашего офиса г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-      <button class="button button-danger" type="button">Закрыть</button>
+      <button class="button-close-modal" type="button">
+        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.273 10.5L20.695 3.07799C21.084 2.68899 21.084 2.05299 20.695 1.66399L19.336 0.304995C18.947 -0.0840054 18.311 -0.0840054 17.922 0.304995L10.5 7.72699L3.07799 0.304995C2.68899 -0.0840054 2.05299 -0.0840054 1.66399 0.304995L0.304995 1.66399C-0.0840054 2.05299 -0.0840054 2.68899 0.304995 3.07799L7.72699 10.5L0.305995 17.922C-0.0830054 18.311 -0.0830054 18.947 0.305995 19.336L1.66499 20.695C2.05399 21.084 2.68999 21.084 3.07899 20.695L10.501 13.273L17.923 20.695C18.312 21.084 18.948 21.084 19.337 20.695L20.696 19.336C21.085 18.947 21.085 18.311 20.696 17.922L13.273 10.5Z" fill="#EE3643"/>
+        </svg>
+      </button>
     </section>
   </body>
 </html>
