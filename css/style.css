@@ -258,30 +258,6 @@ img {
 .basket-empty {
     background-color: transparent;
 }
-/* Pagination */
-.pagination-list li {
-    display: inline-block;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-.pagination-button {
-    padding: 10px 15px;
-    background-color: var(--basic-white);
-    border: 1px solid var(--basic-gray-light-ultra-300);
-    box-sizing: border-box;
-    border-radius: 2px;
-}
-.pagination-button:hover {
-    border: 1px solid var(--basic-gray-light);
-}
-.pagination-button:active {
-    border: 1px solid var(--basic-red);
-}
-.pagination-button-active {
-    color: var(--basic-white);
-    background-color: var(--basic-red);
-    border: none;
-}
 
 /******* Main header *******/
 .main-header {
@@ -587,6 +563,7 @@ img {
 }
 .main-navigation-link:hover {
     background-color: var(--basic-dark-extra);
+    cursor: pointer;
 }
 .main-navigation-link:active {
     background-color: var(--basic-dark-ultra-100);
@@ -1248,6 +1225,7 @@ img {
 }
 .main-footer-nav-list a:hover {
     text-decoration: underline;
+    cursor: pointer;
 }
 .main-footer-nav-list a:active {
     text-decoration: none;
@@ -1827,6 +1805,9 @@ img {
     margin: 0;
     text-align: left;
 }
+.product-sorting-button:focus {
+    outline: none;
+}
 .product-sorting-button span {
     background-image: url("../img/underline-dashed.png");
     background-repeat: repeat-x;
@@ -1842,6 +1823,10 @@ img {
     background-image: url("../img/underline-solid.png");
     background-position: bottom 1px left 0;
     padding-bottom: 3px;
+}
+.product-sorting-button:active span{
+    color: var(--basic-red);
+    background-image: none;
 }
 .product-sorting-button--active span{
     color: var(--basic-red);
@@ -1875,15 +1860,22 @@ img {
     margin-bottom: 14px;
 }
 .product-sorting-direction-button {
+    display: flex;
     border: none;
     padding: 0;
     margin: 0;
 }
-.product-sorting-direction-button--active {
-    background-color: var(--basic-red);
+.product-sorting-direction-button:focus {
+    outline: none;
 }
-.product-sorting-direction-button:hover {
-    background-color: var(--basic-black);
+.product-sorting-ascending-icon:hover path,
+.product-sorting-descending-icon:hover path {
+    fill: var(--basic-black);
+    cursor: pointer;
+}
+.product-sorting-ascending-icon:active path,
+.product-sorting-descending-icon:active path {
+    fill: var(--basic-red);
 }
 /*** Products chosen block ***/
 .chosen-products {
@@ -1898,12 +1890,51 @@ img {
 /*** Product pagination ***/
 .products-pagination {
     grid-area: pagination;
-    margin-bottom: 59px;
+    margin-bottom: 49px;
+    margin-right: -10px;
 }
 .pagination-list {
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
+.pagination-list li {
+    margin-bottom: 10px;
+    margin-right: 10px;
+    display: flex;
+    max-width: 200px;
+}
+.pagination-button {
+    box-sizing: border-box;
+    background-color: var(--basic-white);
+    border: 1px solid var(--basic-gray-light-ultra-300);
+    border-radius: 2px;
+    min-width: 38px;
+    min-height: 38px;
+    padding: 9px 14px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.pagination-button:hover {
+    border: 1px solid var(--basic-gray-light);
+}
+.pagination-button:active {
+    border: 1px solid var(--basic-red);
+}
+.pagination-button.pagination-button-active {
+    color: var(--basic-white);
+    background-color: var(--basic-red);
+    padding: 10px 15px;
+    border: none;
+}
+.pagination-list-item:last-child .pagination-button {
+    padding-left: 31px;
+    padding-right: 30px;
+}
+
 /*** Product description ***/
 .product-description-wrapper {
     background-color: var(--basic-gray-light-ultra-100);
@@ -1916,6 +1947,7 @@ img {
     margin-bottom: 25px;
 }
 .product-description p {
+    width: 907px;
     padding: 0;
     padding-bottom: 68px;
     margin: 0;
@@ -1924,6 +1956,17 @@ img {
 /*** Catalog page Add product to the basket modal */
 .to-basket-modal {
     background-color: var(--basic-white);
+    position: relative;
+    width: 620px;
+}
+.to-basket-modal .button-close-modal {
+    top: 18px;
+    right: 11px;
+}
+.to-basket-modal-content {
+    padding: 0;
+    margin: 0;
+    
 }
 .to-basket-modal-footer {
     background-color: var(--basic-gray-light-ultra-50);
