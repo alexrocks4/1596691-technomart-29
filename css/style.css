@@ -575,8 +575,8 @@ img {
     color: var(--basic-white);
     grid-area: nav;
     padding: 0;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 24px;
+    padding-right: 24px;
     margin: 0;
 }
 .main-navigation-list {
@@ -592,7 +592,7 @@ img {
     word-break: break-all;
     display: block;
     min-width: 111px;
-    max-width: 184px;
+    max-width: 190px;
     padding-top: 16px;
     padding-bottom: 20px;
     padding-left: 29px;
@@ -919,11 +919,12 @@ img {
     padding: 0;
     margin: 0;
     font-size: 18px;
+    font-weight: 700;
     line-height: 20px;
     color: var(--basic-black);
     text-align: center;
     margin-bottom: 7px;
-    width: 157px;
+    width: 165px;
 }
 .product-card-old-price {
     font-size: 17px;
@@ -937,17 +938,19 @@ img {
     font-weight: 700;
     font-size: 17px;
     line-height: 18px;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 4px;
+    background-image: url("../img/price-red-button.svg");
+    background-position: 0 0;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     width: 141px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 31px;
-    padding-right: 43px;
+    padding-right: 40px;
     margin-top: auto;
     margin-bottom: 20px;
-    margin-left: 45px;
-    margin-right: 34px;
+    margin-left: 44px;
+    margin-right: 35px;
     align-self: flex-start;
 }
 .product-actions-list {
@@ -957,6 +960,10 @@ img {
     margin-top: 4px;
     margin-left: 17px;
     margin-right: 18px;
+}
+.card-bfg9000 .product-card-price {
+    margin-left: 46px;
+    margin-right: 33px;
 }
 .card-bfg3000 .product-card-image {
     margin-top: 28px;
@@ -987,6 +994,9 @@ img {
     margin-right: 3px;
 }
 /****** Popular brands ******/
+.brands .block-header-container {
+    padding-right: 19px;
+}
 .brands-list {
     display: contents;
     padding: 0;
@@ -1011,8 +1021,8 @@ img {
 .brands-makita img {
     margin-top: 50px;
     margin-bottom: 55px;
-    margin-left: 48px;
-    margin-right: 49px;
+    margin-left: 47px;
+    margin-right: 50px;
 }
 .brands-dewalt img {
     margin-top: 48px;
@@ -1021,26 +1031,32 @@ img {
 .brands-iterskol img {
     margin-top: 34px;
     margin-bottom: 35px;
-    margin-left: 9px;
-    margin-right: 11px;
+    margin-left: 8px;
+    margin-right: 12px;
 }
 .brands-hitachi img {
     margin-top: 58px;
     margin-bottom: 56px;
-    margin-left: 28px;
-    margin-right: 23px;
+    margin-left: 27px;
+    margin-right: 24px;
 }
 .brands-lg img {
     margin-top: 35px;
     margin-bottom: 37px;
-    margin-left: 48px;
-    margin-right: 51px;
+    margin-left: 47px;
+    margin-right: 52px;
+}
+.brands-aeg img {
+    margin-top: 23px;
+    margin-bottom: 24px;
+    margin-left: 33px;
+    margin-right: 32px;
 }
 .brands-metabo img {
     margin-top: 34px;
     margin-bottom: 38px;
-    margin-left: 8px;
-    margin-right: 6px;
+    margin-left: 7px;
+    margin-right: 7px;
 }
 /****** Services ******/
 .services-wrapper {
@@ -1050,11 +1066,12 @@ img {
 .services {
     box-sizing: border-box;
     min-height: 522px;
-    padding-top: 64px;
+    padding-top: 65px;
     padding-bottom: 64px;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(3, min-content);
+    column-gap: 20px;
 }
 .services p {
     padding: 0;
@@ -1072,22 +1089,35 @@ img {
     margin: 0;
 }
 .services > p {
-    width: 394px;
+    width: 396px;
     margin-bottom: 70px;
     grid-column: 1 / -1;
     grid-row: 2 / 3;
 }
 .services-menu {
+    position: relative;
     padding: 0;
     margin: 0;
     grid-column: 1 / 2;
     grid-row: 3 / 4;
     justify-self: start;
 }
+.services-menu:after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/services-vertical-shadow.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-color: transparent;
+    width: 10px;
+    height: 279px;
+    top: -49px;
+    right: 0px;
+}
 .services-delivery,
 .services-guarantee,
 .services-credit {
-    grid-column: 2 / 3;
+    grid-column: 2 / -1;
     grid-row: 3 / 4;
 }
 .services-menu-item {
@@ -1104,6 +1134,7 @@ img {
     padding-top: 13.5px;
     padding-left: 22px;
     padding-bottom: 17.5px;
+    margin-bottom: 1px;
 }
 .services-menu-active {
     color: var(--basic-dark);
@@ -1118,7 +1149,9 @@ img {
     display: none;
 }
 .services-delivery .services-subheader {
-    margin-bottom: 30px;
+    position: relative;
+    top: -3px;
+    margin-bottom: 27px;
 }
 .services-delivery p {
     width: 275px;
