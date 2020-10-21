@@ -299,12 +299,14 @@ img {
     background-color: var(--basic-red);
     box-shadow: inset 0px -5px 0px 0px rgba(0, 0, 0, 0.24);
 }
+.main-logo img {
+    display: block;
+}
 .main-header-logo {
     cursor: pointer;
     width: 220px;
-    height: 47px;
-    padding-top: 12px;
-    padding-left: 56px;
+    min-height: 47px;
+    padding: 12px 56px;
     margin-bottom: -5px;
 }
 .main-header-logo:active {
@@ -1317,7 +1319,7 @@ img {
     min-height: 193px;
     display: grid;
     grid-template-columns: 380px 1fr;
-    grid-template-rows: 68px min-content;
+    grid-template-rows: minmax(68px, auto) min-content;
     grid-template-areas: 
         "logo     links"
         "contacts links";
@@ -1325,10 +1327,9 @@ img {
 }
 .main-footer-logo {
     cursor: pointer;
-    padding-top: 20px;
-    padding-left: 41px;
+    padding: 20px 41px 25px;
     width: 220px;
-    height: 68px;
+    min-height: 68px;
     background-color: var(--basic-red);
     grid-area: logo;
 }
@@ -1476,12 +1477,18 @@ img {
     background-repeat: repeat-x;
     background-size: auto 7px;
     background-position: top 0 left 0;
+    background-color: var(--basic-white);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    z-index: 100;
 }
 
 /* Write us modal */
 .write-us-modal {
     width: 620px;
-    position: relative;
     display: none;
 }
 .write-us-modal-form {
@@ -1491,23 +1498,21 @@ img {
     width: 460px;
     margin: 0 auto;
 }
-.write-us-modal::placeholder {
+.write-us-modal input,
+.write-us-modal textarea {
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 13px;
     line-height: 24px;
     font-weight: 400;
     color: var(--basic-gray-light-extra);
-}
-.write-us-modal input,
-.write-us-modal textarea {
-    padding: 0;
+    padding: 7px 11px;
     margin: 0;
     border: 2px solid var(--basic-gray-light);
     box-sizing: border-box;
     border-radius: 2px;
 }
 .write-us-modal .button-close-modal {
-    top: 28px;
+    top: 21px;
     right: 11px;
 }
 .write-us-modal-content {
@@ -1542,8 +1547,9 @@ img {
     flex-basis: 460px;
 }
 .write-us-modal-item textarea {
+    display: block;
     width: 100%;
-    min-height: 114px;
+    height: 114px;
 }
 .write-us-modal-footer-wrapper {
     background-color: var(--basic-gray-light-ultra-250);
@@ -1557,10 +1563,10 @@ img {
     width: 100%;
 }
 /* Map modal */
-.map-modal {
+.map-modal img {
+    display: block;
     width: 943px;
     height: 449px;
-    display: none;
 }
 .map-modal .button-close-modal {
     top: 17px;
