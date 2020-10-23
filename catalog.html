@@ -93,13 +93,13 @@
         <nav class="main-navigation">
           <ul class="list main-navigation-list">
             <li class="main-navigation-item">
-              <a class="main-navigation-link">Главная</a>
+              <a class="main-navigation-link" href="index.html">Главная</a>
             </li>
             <li class="main-navigation-item">
               <a class="main-navigation-link" href="">Компания</a>
             </li>
             <li class="main-navigation-item">
-              <a class="main-navigation-link" href="catalog.html">Каталог</a>
+              <a class="main-navigation-link">Каталог</a>
             </li>
             <li class="main-navigation-item">
               <a class="main-navigation-link" href="">Новости</a>
@@ -136,23 +136,21 @@
         <section class="product-filter">
           <h2 class="product-filter-header">Фильтр:</h2>
           <!--Форма фильтра перфораторов-->
-          <form class="product-filter-form" action="https://echo.htmlacademy.ru/" method="get" oninput="window['start-price-output'].value = window['start-price'].value; window['end-price-output'].value = window['end-price'].value;">
+          <form class="product-filter-form" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="form-fieldset price-filter-fieldset">
               <legend class="product-filter-subheader">Цена:</legend>
               <div class="price-range-container">
-                <label class="visually-hidden">
-                  Минимальная цена
-                  <input type="range" min="0" max="40000" step="1" name="start-price" id="start-price" value="0">
-                </label>
-                <label class="visually-hidden">
-                  Максимальная цена
-                  <input type="range" min="0" max="40000" step="1" name="end-price" id="end-price" value="30000">
-                </label>
+                <div class="price-range-scale">
+                  <div class="filled-bar" style="width: 79%; margin-left: 4.5%"></div>
+                  <div class="handle left-handle" style="left: 4.5%"></div>
+                  <div class="handle right-handle" style="left: 83.5%"></div>
+                </div>
               </div>
               <div class="price-output-wrapper">
-                <output class="price-output" name="start-price-output" id="start-price-output" for="start-price">0</output>
-                <span class="price-separator">&mdash;</span>
-                <output class="price-output" name="end-price-output" id="end-price-output" for="end-price">30000</output>
+                <label class="visually-hidden" for="start-price">Минимальная цена</label>
+                <input class="start-price" type="number" min="0" max="40000" step="1" name="start-price" id="start-price" value="0">
+                <label class="visually-hidden">Максимальная цена</label>
+                <input class="end-price" type="number" min="0" max="40000" step="1" name="end-price" id="end-price" value="30000">
               </div>
             </fieldset>
             <fieldset class="form-fieldset brands-filter-fieldset">
@@ -458,7 +456,7 @@
     <footer class="page-footer main-footer">
       <div class="container main-footer-primary-content">
         <a class="main-logo main-footer-logo" href="index.html">
-          <img src="img/logo-technomart.svg" width="108" height="18" alt="Логотип компании ТЕХНОМАРТ. Надпись ТЕХНОМАРТ белыми буквами на ярко-красном фоне.">
+          <img src="img/logo-technomart.svg" width="138" height="23" alt="Логотип компании ТЕХНОМАРТ. Надпись ТЕХНОМАРТ белыми буквами на ярко-красном фоне.">
         </a>
         <ul class="list main-footer-nav-list">
           <li>

@@ -20,7 +20,11 @@
     --basic-gray-light: #C5C5C5;
     --basic-gray-light-100: #C1C6CE;
     --basic-gray-light-extra: #A9A9A9;
+    --basic-gray-light-extra-50: #ABABAB;
     --basic-gray-light-extra-100: #B5B5B5;
+    --basic-gray-light-extra-200: #D7DCDE;
+    --basic-gray-light-extra-300: #CFCFCF;
+    --basic-gray-light-extra-400: #E2E2E2;
     --basic-gray-light-ultra: #EAEAEA;
     --basic-gray-light-ultra-50: #F1F1F1;
     --basic-gray-light-ultra-100: #F1F5F7;
@@ -35,6 +39,7 @@
     --basic-green-dark-ultra: #444444;
     --basic-green-light: #5FBB2D;
     --basic-green-light-extra: #8ED78F;
+    --basic-green-light-extra-100: #00ca74;
     --basic-yellow-light: #FFBF47;
     --basic-yellow-light-extra: #FFC047;
     --basic-yellow-light-ultra: #FFD180;
@@ -1554,8 +1559,7 @@ img {
     left: 0;
     width: 100%;
     height: 7px;
-    background-image: url("../img/modal-horizontal-line.png");
-    background-position: 0 0;
+    background-color: var(--basic-red);
     z-index: 1000;
 }
 
@@ -1844,9 +1848,11 @@ img {
 }
 .product-filter-header,
 .price-range-container,
-.price-output,
+.start-price,
+.end-price,
 .product-sorting {
     background-color: var(--basic-beige-dark);
+    border-radius: 3px;
 }
 .product-filter-header {
     padding: 0;
@@ -1875,28 +1881,28 @@ img {
     border-bottom: 1px solid var(--special-black-ultra);
 }
 /* Show/Hide images based on checked status of the input tag*/
-.checkbox[checked] ~ .checkbox-image--unchecked,
-.radio-button[checked] ~ .radio-button-image--unchecked {
+.checkbox:checked ~ .checkbox-image--unchecked,
+.radio-button:checked ~ .radio-button-image--unchecked {
     display: none;
 }
-.checkbox[checked] ~ .checkbox-image--checked,
-.radio-button[checked] ~ .radio-button-image--checked {
+.checkbox:checked ~ .checkbox-image--checked,
+.radio-button:checked ~ .radio-button-image--checked {
     display: inline-block;
 }
-.checkbox:not([checked]) ~ .checkbox-image--unchecked,
-.radio-button:not([checked]) ~ .radio-button-image--unchecked {
+.checkbox:not(:checked) ~ .checkbox-image--unchecked,
+.radio-button:not(:checked) ~ .radio-button-image--unchecked {
     display: inline-block;
 }
-.checkbox:not([checked]) ~ .checkbox-image--checked,
-.radio-button:not([checked]) ~ .radio-button-image--checked {
+.checkbox:not(:checked) ~ .checkbox-image--checked,
+.radio-button:not(:checked) ~ .radio-button-image--checked {
     display: none;
 }
 .form-label:hover {
     cursor: pointer;
 }
-.form-label:hover .checkbox-image,
-.form-label:hover .radio-button-image {
-    background-color: var(--basic-gray-light-extra-100);
+.form-label:hover path,
+.form-label:hover path {
+    fill: var(--basic-gray-light-extra-100);
 }
 
 .form-label:active .checkbox-image,
@@ -1908,71 +1914,94 @@ img {
 }
 /* Price filter fieldset */
 .price-filter-fieldset {
+    padding-bottom: 25px;
     margin-bottom: 16px;
+    border-bottom: 1px solid var(--basic-gray-light-extra-400);
 }
 .price-filter-fieldset .product-filter-subheader {
-    margin-bottom: 10.85px;
+    margin-bottom: 12px;
 }
 .price-range-container {
     height: 80px;
     margin-bottom: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.price-range-scale {
+    background-color: var(--basic-gray-light-extra-200);
+    width: 180px;
+    height: 2px;
+    position: relative;
+}
+.price-range-scale .filled-bar{
+    background-color: var(--basic-green-light-extra-100);
+    height: 100%;
+    width: 100%;
+}
+.price-range-scale .handle {
+    background-color: var(--basic-gray-light-extra-50);
+    cursor: pointer;
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 8px solid var(--basic-white);
+    border-radius: 50%;
+    box-shadow: 0 1.5px 1px 0 var(--basic-gray-light-extra-300);
+    transform: translate(-50%, -50%);
 }
 .price-output-wrapper {
-    margin-bottom: 25px;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 }
-.price-output {
-    font-size: 17px;
-    line-height: 18px;
-    width: 95px;
-    height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.price-separator {
+.price-output-wrapper::before {
+    content: "\2014";
     font-size: 16px;
     line-height: 18px;
     color: var(--basic-green-dark-ultra);
-    width: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    align-self: center;
+    order: 2;
 }
-.price-filter-fieldset::after {
+.start-price,
+.end-price {
+    box-sizing: border-box;
+    border: none;
     display: block;
-    content: "";
-    width: 100%;
-    height: 1px;
-    background-image: url("../img/product-filter-price-fieldset-border.svg");
-    background-repeat: repeat;
+    font-size: 17px;
+    line-height: 18px;
+    text-align: center;
+    width: 95px;
+    height: 38px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 17px;
+}
+.start-price {
+    order: 1;
+}
+.end-price {
+    order: 3;
 }
 /*Brands filter fieldset */
 .brands-filter-fieldset {
+    padding-bottom: 26px;
     margin-bottom: 16px;
-}
-.brands-filter-fieldset::after {
-    display: block;
-    content: "";
-    width: 100%;
-    height: 1px;
-    background-image: url("../img/product-filter-brands-fieldset-border.svg");
-    background-repeat: repeat;
+    border-bottom: 1px solid var(--basic-gray-light-extra-400);
 }
 .brands-filter-fieldset .product-filter-subheader {
     margin-bottom: 15px;
 }
 .brands-filter-fieldset .form-label {
-    margin-bottom: 16px;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
 }
-.brands-filter-fieldset .form-label:last-of-type {
-    margin-bottom: 26px;
+.brands-filter-fieldset .form-label:not(:last-of-type) {
+    margin-bottom: 16px;
 }
 .brands-filter-fieldset .checkbox {
     display: none;
@@ -2001,7 +2030,7 @@ img {
     align-items: flex-start;
 }
 .power-filter-fieldset .form-label:last-of-type {
-    margin-bottom: 34.15px;
+    margin-bottom: 33px;
 }
 .power-filter-fieldset .radio-button-image {
     margin-right: 10px;
@@ -2207,7 +2236,6 @@ img {
 .to-basket-modal {
     display: none;
     background-color: var(--basic-white);
-    position: relative;
     width: 620px;
 }
 .to-basket-modal .button-close-modal {
@@ -2225,7 +2253,7 @@ img {
     padding: 0;
     padding-left: 95px;
     margin: 0;
-    margin-top: 66px;
+    margin-top: 73px;
     margin-bottom: 67.43px;
     margin-left: 81px;
 }
