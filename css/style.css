@@ -143,9 +143,6 @@ img {
     padding-bottom: 9px;
     margin: 0;
 }
-.button:focus {
-    outline: none;
-}
 .button-default {
     display: block;
     padding: 0;
@@ -153,9 +150,6 @@ img {
     background-color: transparent;
     border: none;
     cursor: pointer;
-}
-.button-default:focus {
-    outline: none;
 }
 .button-danger {
     color: var(--basic-white);
@@ -279,9 +273,6 @@ img {
 .submenu-icon {
     opacity: 0.3;
 }
-.submenu-icon:focus {
-    outline: none;
-}
 .submenu-icon:hover {
     opacity: 1;
     cursor: pointer;
@@ -341,7 +332,6 @@ img {
 .search-form-input:focus {
     color: var(--basic-black);
     background-color: var(--basic-white);
-    outline: none;
 }
 .search-form-input:focus::placeholder {
     color: var(--basic-black);
@@ -926,10 +916,10 @@ img {
     filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
 }
 .product-card:hover .product-card-image-container {
-    display: none;
+    visibility: collapse;
 }
 .product-card:hover .product-actions-list {
-    display: block;
+    visibility: visible;
 }
 .product-card-image-container {
     min-height: 170px;
@@ -997,7 +987,8 @@ img {
     align-self: flex-start;
 }
 .product-actions-list {
-    display: none;
+    visibility: collapse;
+    display: block;
     padding: 0;
     margin: 0;
     margin-top: 37px;
@@ -2097,9 +2088,6 @@ img {
     margin: 0;
     text-align: left;
 }
-.product-sorting-button:focus {
-    outline: none;
-}
 .product-sorting-button span {
     background-image: url("../img/underline-dashed.png");
     background-repeat: repeat-x;
@@ -2156,9 +2144,6 @@ img {
     border: none;
     padding: 0;
     margin: 0;
-}
-.product-sorting-direction-button:focus {
-    outline: none;
 }
 .product-sorting-ascending-icon:hover path,
 .product-sorting-descending-icon:hover path {
