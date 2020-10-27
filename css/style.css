@@ -105,7 +105,7 @@ img {
 .list {
     list-style: none;
 }
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -1906,11 +1906,11 @@ img {
 }
 .checkbox:checked ~ .checkbox-image--checked,
 .radio-button:checked ~ .radio-button-image--checked {
-    display: inline-block;
+    display: block;
 }
 .checkbox:not(:checked) ~ .checkbox-image--unchecked,
 .radio-button:not(:checked) ~ .radio-button-image--unchecked {
-    display: inline-block;
+    display: block;
 }
 .checkbox:not(:checked) ~ .checkbox-image--checked,
 .radio-button:not(:checked) ~ .radio-button-image--checked {
@@ -1919,7 +1919,8 @@ img {
 .form-label:hover {
     cursor: pointer;
 }
-.form-label:hover path,
+.checkbox:focus ~ svg path,
+.radio-button:focus ~ svg path,
 .form-label:hover path {
     fill: var(--basic-gray-light-extra-100);
 }
@@ -2022,9 +2023,6 @@ img {
 .brands-filter-fieldset .form-label:not(:last-of-type) {
     margin-bottom: 16px;
 }
-.brands-filter-fieldset .checkbox {
-    display: none;
-}
 .brands-filter-fieldset .checkbox-image--unchecked {
     margin-right: 12px;
 }
@@ -2036,9 +2034,6 @@ img {
     align-self: center;
 }
 /* Power filter fieldset*/
-.power-filter-fieldset .radio-button{
-    display: none;
-}
 .power-filter-fieldset .product-filter-subheader {
     margin-bottom: 20.85px;
 }
