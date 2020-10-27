@@ -1828,6 +1828,15 @@ img {
     background-repeat: no-repeat;
     margin-top: 3px;
 }
+.breadcrumbs-list-item:first-child a {
+  background-color: var(--basic-gray-light-100);
+  background-image: url("../img/icons/icon-home.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 12px;
+  margin-top: 3px;
+}
 .breadcrumbs-list-item:nth-child(2) a {
     margin-right: 17px;
 }
@@ -1836,9 +1845,6 @@ img {
 }
 .breadcrumbs-list-item:nth-child(3) a {
     margin-right: 18px;
-}
-.breadcrumbs-list-item .home-icon {
-    margin-top: 3px;
 }
 .breadcrumbs-list-item:first-child {
     margin-right: 18px;

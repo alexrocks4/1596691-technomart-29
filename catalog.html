@@ -26,7 +26,7 @@
             <span class="visually-hidden">Поиск: </span>
             <input class="search-form-input" type="text" name="search-string" placeholder="Поиск:">
             <svg class="submenu-icon search-form-icon" width="17" height="17" viewBox="0 0 17 17" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"
                 fill="white" />
@@ -34,21 +34,21 @@
           </label>
         </form>
         <!--Закладки-->
-        <button class="button bookmark-button" type="button">
+        <a class="button bookmark-button" href="blank.html">
           <svg class="submenu-icon" width="14" height="16" viewBox="0 0 14 16" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
             <path
               d="M14 15C14 15.55 13.632 15.741 13.182 15.426L7.819 11.661C7.369 11.346 6.632 11.346 6.182 11.661L0.818 15.426C0.368 15.741 0 15.55 0 15V1C0 0.45 0.45 0 1 0H13C13.55 0 14 0.45 14 1V15Z"
               fill="white" />
           </svg>
           <span>Закладки: 0</span>
-        </button>
+        </a>
         <!--Корзина и Оформление заказа-->
         <ul class="list products-actions-list">
           <li class="products-actions-item">
-            <a class="basket-link basket-not-empty" href="">
+            <a class="basket-link basket-not-empty" href="blank.html">
               <svg class="submenu-icon" width="15" height="15" viewBox="0 0 15 15" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                 <path
                   d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z"
                   fill="white" />
@@ -61,7 +61,7 @@
             </a>
           </li>
           <li class="products-actions-item">
-            <a class="button order-link" href="">Оформить заказ</a>
+            <a class="button order-link" href="blank.html">Оформить заказ</a>
           </li>
         </ul>
       </div>
@@ -75,16 +75,17 @@
       <!--Контакты-->
       <div class="main-header-contacts-wrapper">
         <address class="contact-phone">
-          <a class="contact-phone-link" href="tel:+78125550555">+7 (812) 555-05-55</a>
+          <a class="contact-phone-link" href="tel:+78125550555" aria-label="Контактный номер телефона">+7 (812)
+            555-05-55</a>
         </address>
         <address class="contact-address">г.&nbsp;<span class="nobr">Санкт-Петербург</span>,
           ул.&nbsp;Б.&nbsp;Конюшенная,&nbsp;д.&nbsp;19/8</address>
       </div>
       <ul class="list logged-in-actions-list">
         <li class="logged-in-actions-item">
-          <a class="user-profile-link" href="">
+          <a class="user-profile-link" href="blank.html">
             <svg class="user-icon" width="20" height="18" viewBox="0 0 20 18" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
               <path
                 d="M17.881 14.166C15.737 13.431 13.625 12.5 12.674 11.776C12.017 11.275 11.904 10.158 12.157 9.361C13.275 8.458 14.021 6.884 14.021 5.083C14.021 2.276 12.221 0 10 0C7.77902 0 5.97901 2.276 5.97901 5.083C5.97901 6.884 6.72501 8.457 7.84201 9.36C8.09501 10.158 7.98302 11.275 7.32502 11.776C6.37502 12.5 4.26201 13.43 2.11801 14.166C-0.0259852 14.902 1.48343e-05 18 1.48343e-05 18H20C20 18 20.025 14.901 17.881 14.166Z"
                 fill="#C5C5C5" />
@@ -94,9 +95,9 @@
         </li>
         <li class="logged-in-actions-item">
           <!--Выход-->
-          <a class="logout-link" href="" title="Выход">
+          <a class="logout-link" href="blank.html" title="Выход">
             <svg class="logout-icon" width="20" height="17" viewBox="0 0 20 17" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
               <path d="M20 8.5L11.125 0V6H5.125V11H11.125V17L20 8.5Z" fill="#C5C5C5" />
               <path
                 d="M2.10591 13.952V3.048C2.12391 2.672 2.27691 1.991 3.11591 1.991H8.14291V0H3.11591C0.937914 0 0.111914 1.81 0.0869141 3.027V13.973C0.111914 15.189 0.937914 17 3.11591 17H8.14291V15.01H3.11591C2.27691 15.01 2.12391 14.327 2.10591 13.952Z"
@@ -106,10 +107,10 @@
           </a>
         </li>
         <li class="logged-in-actions-item dot-separator">
-          <a class="user-orders-link" href="">Мои заказы</a>
+          <a class="user-orders-link" href="blank.html">Мои заказы</a>
         </li>
         <li class="logged-in-actions-item">
-          <a class="personal-account-link" href="">Личный кабинет</a>
+          <a class="personal-account-link" href="blank.html">Личный кабинет</a>
         </li>
       </ul>
       <!--Главная навигация-->
@@ -119,22 +120,22 @@
             <a class="main-navigation-link" href="index.html">Главная</a>
           </li>
           <li class="main-navigation-item">
-            <a class="main-navigation-link" href="">Компания</a>
+            <a class="main-navigation-link" href="blank.html">Компания</a>
           </li>
           <li class="main-navigation-item">
             <a class="main-navigation-link">Каталог</a>
           </li>
           <li class="main-navigation-item">
-            <a class="main-navigation-link" href="">Новости</a>
+            <a class="main-navigation-link" href="blank.html">Новости</a>
           </li>
           <li class="main-navigation-item">
-            <a class="main-navigation-link" href="">Спецпредложения</a>
+            <a class="main-navigation-link" href="blank.html">Спецпредложения</a>
           </li>
           <li class="main-navigation-item">
-            <a class="main-navigation-link" href="">Доставка</a>
+            <a class="main-navigation-link" href="blank.html">Доставка</a>
           </li>
           <li class="main-navigation-item">
-            <a class="main-navigation-link" href="">Контакты</a>
+            <a class="main-navigation-link" href="blank.html">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -145,17 +146,11 @@
       <ol class="list breadcrumbs-list">
         <li class="breadcrumbs-list-item">
           <a href="index.html">
-            <svg class="home-icon" width="14" height="12" viewBox="0 0 14 12" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M2 7.99999V12H6V7.99999H8V12H12V7.99999L7 3.51599L2 7.99999Z" fill="#C1C6CE" />
-              <path
-                d="M13.831 6.365L12 4.751V0H9.99998V2.987L7.33198 0.635C7.31198 0.618 7.28898 0.612 7.26798 0.598C7.24294 0.579705 7.21614 0.56396 7.18798 0.551C7.15708 0.540195 7.12529 0.532163 7.09298 0.527C7.06198 0.521 7.03198 0.515 6.99998 0.515C6.96898 0.515 6.93898 0.521 6.90798 0.527C6.87551 0.531919 6.84366 0.5403 6.81298 0.552C6.78498 0.563 6.75998 0.581 6.73298 0.598C6.71198 0.612 6.68798 0.618 6.66898 0.635L0.170976 6.365C0.0162401 6.50291 -0.0375953 6.72187 0.0355474 6.9158C0.10869 7.10974 0.293707 7.23862 0.500976 7.24C0.622907 7.24035 0.740711 7.19586 0.831976 7.115L6.99998 1.677L13.169 7.115C13.3778 7.27913 13.6784 7.25178 13.8542 7.05265C14.0299 6.85352 14.0198 6.55183 13.831 6.365Z"
-                fill="#C1C6CE" />
-            </svg>
+            <span class="visually-hidden">Главная страница</span>
           </a>
         </li>
-        <li class="breadcrumbs-list-item"><a href="">Каталог</a></li>
-        <li class="breadcrumbs-list-item"><a href="">Инструмент</a></li>
+        <li class="breadcrumbs-list-item"><a href="blank.html">Каталог</a></li>
+        <li class="breadcrumbs-list-item"><a href="blank.html">Инструмент</a></li>
         <li class="breadcrumbs-list-item"><a>Перфораторы</a></li>
       </ol>
       <h1 class="text-header text-header-primary main-content-header">Перфораторы</h1>
@@ -186,13 +181,13 @@
             <label class="form-label">
               <input class="checkbox visually-hidden" type="checkbox" name="bosch" value="bosch" checked>
               <svg class="checkbox-image checkbox-image--unchecked" width="23" height="23" viewBox="0 0 23 23"
-                fill="none" xmlns="http://www.w3.org/2000/svg">
+                fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z"
                   fill="#C5C5C5" />
               </svg>
               <svg class="checkbox-image checkbox-image--checked" width="27" height="23" viewBox="0 0 27 23" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                 <path
                   d="M7.28505 7.48598L4.45605 10.315L12.2391 18.098L26.1711 4.16598L23.3431 1.33698L12.2391 12.439L7.28505 7.48598Z"
                   fill="#C5C5C5" />
@@ -205,13 +200,13 @@
             <label class="form-label">
               <input class="checkbox visually-hidden" type="checkbox" name="interskol" value="interskol">
               <svg class="checkbox-image checkbox-image--unchecked" width="23" height="23" viewBox="0 0 23 23"
-                fill="none" xmlns="http://www.w3.org/2000/svg">
+                fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z"
                   fill="#C5C5C5" />
               </svg>
               <svg class="checkbox-image checkbox-image--checked" width="27" height="23" viewBox="0 0 27 23" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                 <path
                   d="M7.28505 7.48598L4.45605 10.315L12.2391 18.098L26.1711 4.16598L23.3431 1.33698L12.2391 12.439L7.28505 7.48598Z"
                   fill="#C5C5C5" />
@@ -224,13 +219,13 @@
             <label class="form-label">
               <input class="checkbox visually-hidden" type="checkbox" name="makita" checked value="makita">
               <svg class="checkbox-image checkbox-image--unchecked" width="23" height="23" viewBox="0 0 23 23"
-                fill="none" xmlns="http://www.w3.org/2000/svg">
+                fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z"
                   fill="#C5C5C5" />
               </svg>
               <svg class="checkbox-image checkbox-image--checked" width="27" height="23" viewBox="0 0 27 23" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                 <path
                   d="M7.28505 7.48598L4.45605 10.315L12.2391 18.098L26.1711 4.16598L23.3431 1.33698L12.2391 12.439L7.28505 7.48598Z"
                   fill="#C5C5C5" />
@@ -243,13 +238,13 @@
             <label class="form-label">
               <input class="checkbox visually-hidden" type="checkbox" name="dewalt" value="dewalt">
               <svg class="checkbox-image checkbox-image--unchecked" width="23" height="23" viewBox="0 0 23 23"
-                fill="none" xmlns="http://www.w3.org/2000/svg">
+                fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z"
                   fill="#C5C5C5" />
               </svg>
               <svg class="checkbox-image checkbox-image--checked" width="27" height="23" viewBox="0 0 27 23" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                 <path
                   d="M7.28505 7.48598L4.45605 10.315L12.2391 18.098L26.1711 4.16598L23.3431 1.33698L12.2391 12.439L7.28505 7.48598Z"
                   fill="#C5C5C5" />
@@ -262,13 +257,13 @@
             <label class="form-label">
               <input class="checkbox visually-hidden" type="checkbox" name="hitachi" value="hitachi">
               <svg class="checkbox-image checkbox-image--unchecked" width="23" height="23" viewBox="0 0 23 23"
-                fill="none" xmlns="http://www.w3.org/2000/svg">
+                fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z"
                   fill="#C5C5C5" />
               </svg>
               <svg class="checkbox-image checkbox-image--checked" width="27" height="23" viewBox="0 0 27 23" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                 <path
                   d="M7.28505 7.48598L4.45605 10.315L12.2391 18.098L26.1711 4.16598L23.3431 1.33698L12.2391 12.439L7.28505 7.48598Z"
                   fill="#C5C5C5" />
@@ -284,13 +279,13 @@
             <label class="form-label">
               <input class="radio-button visually-hidden" type="radio" name="power" value="accum" checked>
               <svg class="radio-button-image radio-button-image--unchecked" width="25" height="26" viewBox="0 0 25 26"
-                fill="none" xmlns="http://www.w3.org/2000/svg">
+                fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M0 13.3542C0 6.45125 5.597 0.854248 12.5 0.854248C19.403 0.854248 25 6.45125 25 13.3542C25 20.2572 19.403 25.8542 12.5 25.8542C5.597 25.8542 0 20.2572 0 13.3542ZM21 13.3542C21 8.66725 17.187 4.85425 12.5 4.85425C7.813 4.85425 4 8.66725 4 13.3542C4 18.0412 7.813 21.8542 12.5 21.8542C17.187 21.8542 21 18.0412 21 13.3542Z"
                   fill="#C5C5C5" />
               </svg>
               <svg class="radio-button-image radio-button-image--checked" width="25" height="26" viewBox="0 0 25 26"
-                fill="none" xmlns="http://www.w3.org/2000/svg">
+                fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M0 13.3542C0 6.45125 5.597 0.854248 12.5 0.854248C19.403 0.854248 25 6.45125 25 13.3542C25 20.2572 19.403 25.8542 12.5 25.8542C5.597 25.8542 0 20.2572 0 13.3542ZM21 13.3542C21 8.66725 17.187 4.85425 12.5 4.85425C7.813 4.85425 4 8.66725 4 13.3542C4 18.0412 7.813 21.8542 12.5 21.8542C17.187 21.8542 21 18.0412 21 13.3542Z"
                   fill="#C5C5C5" />
@@ -303,13 +298,13 @@
             <label class="form-label">
               <input class="radio-button visually-hidden" type="radio" name="power" value="inline">
               <svg class="radio-button-image radio-button-image--unchecked" width="25" height="26" viewBox="0 0 25 26"
-                fill="none" xmlns="http://www.w3.org/2000/svg">
+                fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M0 13.3542C0 6.45125 5.597 0.854248 12.5 0.854248C19.403 0.854248 25 6.45125 25 13.3542C25 20.2572 19.403 25.8542 12.5 25.8542C5.597 25.8542 0 20.2572 0 13.3542ZM21 13.3542C21 8.66725 17.187 4.85425 12.5 4.85425C7.813 4.85425 4 8.66725 4 13.3542C4 18.0412 7.813 21.8542 12.5 21.8542C17.187 21.8542 21 18.0412 21 13.3542Z"
                   fill="#C5C5C5" />
               </svg>
               <svg class="radio-button-image radio-button-image--checked" width="25" height="26" viewBox="0 0 25 26"
-                fill="none" xmlns="http://www.w3.org/2000/svg">
+                fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M0 13.3542C0 6.45125 5.597 0.854248 12.5 0.854248C19.403 0.854248 25 6.45125 25 13.3542C25 20.2572 19.403 25.8542 12.5 25.8542C5.597 25.8542 0 20.2572 0 13.3542ZM21 13.3542C21 8.66725 17.187 4.85425 12.5 4.85425C7.813 4.85425 4 8.66725 4 13.3542C4 18.0412 7.813 21.8542 12.5 21.8542C17.187 21.8542 21 18.0412 21 13.3542Z"
                   fill="#C5C5C5" />
@@ -338,7 +333,7 @@
         <button class="product-sorting-direction-button product-sorting-direction-button--active" type="button">
           <span class="visually-hidden">Сортировать по возрастанию</span>
           <svg class="product-sorting-ascending-icon" width="11" height="10" viewBox="0 0 11 10" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
             <path d="M5.5 0L11 10L0 10" fill="#EE3643" />
           </svg>
         </button>
@@ -346,7 +341,7 @@
         <button class="product-sorting-direction-button" type="button">
           <span class="visually-hidden">Сортировать по убыванию</span>
           <svg class="product-sorting-descending-icon" width="11" height="10" viewBox="0 0 11 10" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
             <path d="M5.5 10L0 0H11" fill="#C5C5C5" />
           </svg>
         </button>
@@ -359,18 +354,21 @@
               alt="Перфоратор черно-синего цвета в собранном виде со средним сверлом, c измерителем глубины сверления на светлом фоне.">
             <ul class="list product-actions-list">
               <li class="product-actions-item">
-                <button class="button-default button-success product-actions-buy" type="button">
+                <button class="button-default button-success product-actions-buy" type="button"
+                  aria-label="Добавить перфоратор BOSCH BFG 6000 в корзину">
                   <span>Купить</span>
                 </button>
               </li>
               <li class="product-actions-item">
-                <button class="button button-outline-success product-actions-bookmark">В закладки</button>
+                <button class="button button-outline-success product-actions-bookmark"
+                  aria-label="Добавить карточку перфоратора BOSCH BFG 6000 в закладки">В закладки</button>
               </li>
             </ul>
           </div>
           <h3 class="product-card-name">Перфоратор BOSCH BFG 6000</h3>
           <del class="product-card-old-price">30500 Р.</del>
-          <a class="button button-danger product-card-price" href="">25500 Р.</a>
+          <a class="button button-danger product-card-price" href="blank.html"
+            aria-label="Перейти к оформлению покупки товара">25500 Р.</a>
         </section>
         <section class="product-card card-bfg6000">
           <div class="product-card-image-container">
@@ -378,37 +376,44 @@
               alt="Перфоратор черно-синего цвета в собранном виде со средним сверлом, c измерителем глубины сверления на светлом фоне.">
             <ul class="list product-actions-list">
               <li class="product-actions-item">
-                <button class="button-default button-success product-actions-buy" type="button">
+                <button class="button-default button-success product-actions-buy" type="button"
+                  aria-label="Добавить перфоратор BOSCH BFG 6000 в корзину">
                   <span>Купить</span>
                 </button>
               </li>
               <li class="product-actions-item">
-                <button class="button button-outline-success product-actions-bookmark">В закладки</button>
+                <button class="button button-outline-success product-actions-bookmark"
+                  aria-label="Добавить карточку перфоратора BOSCH BFG 6000 в закладки">В закладки</button>
               </li>
             </ul>
           </div>
           <h3 class="product-card-name">Перфоратор BOSCH BFG 6000</h3>
           <del class="product-card-old-price">30500 Р.</del>
-          <a class="button button-danger product-card-price" href="">25500 Р.</a>
+          <a class="button button-danger product-card-price" href="blank.html"
+            aria-label="Перейти к оформлению покупки товара">25500 Р.</a>
         </section>
         <section class="product-card card-bfg6000">
           <div class="product-card-image-container">
-            <img class="product-card-image product-card-image--hidden" src="img/perforator-bosch-bfg6000.jpg" width="144" height="128"
+            <img class="product-card-image product-card-image--hidden" src="img/perforator-bosch-bfg6000.jpg"
+              width="144" height="128"
               alt="Перфоратор черно-синего цвета в собранном виде со средним сверлом, c измерителем глубины сверления на светлом фоне.">
             <ul class="list product-actions-list product-actions-list--visible">
               <li class="product-actions-item">
-                <button class="button-default button-success product-actions-buy" type="button">
+                <button class="button-default button-success product-actions-buy" type="button"
+                  aria-label="Добавить перфоратор BOSCH BFG 6000 в корзину">
                   <span>Купить</span>
                 </button>
               </li>
               <li class="product-actions-item">
-                <button class="button button-outline-success product-actions-bookmark">В закладки</button>
+                <button class="button button-outline-success product-actions-bookmark"
+                  aria-label="Добавить карточку перфоратора BOSCH BFG 6000 в закладки">В закладки</button>
               </li>
             </ul>
           </div>
           <h3 class="product-card-name">Перфоратор BOSCH BFG 6000</h3>
           <del class="product-card-old-price">30500 Р.</del>
-          <a class="button button-danger product-card-price" href="">25500 Р.</a>
+          <a class="button button-danger product-card-price" href="blank.html"
+            aria-label="Перейти к оформлению покупки товара">25500 Р.</a>
           <b class="mark">New</b>
         </section>
         <section class="product-card card-bfg3000">
@@ -417,18 +422,21 @@
               alt="Перфоратор черно-синего цвета в собранном виде со средним сверлом на светлом фоне">
             <ul class="list product-actions-list">
               <li class="product-actions-item">
-                <button class="button-default button-success product-actions-buy" type="button">
+                <button class="button-default button-success product-actions-buy" type="button"
+                  aria-label="Добавить перфоратор BOSCH BFG 3000 в корзину">
                   <span>Купить</span>
                 </button>
               </li>
               <li class="product-actions-item">
-                <button class="button button-outline-success product-actions-bookmark">В закладки</button>
+                <button class="button button-outline-success product-actions-bookmark"
+                  aria-label="Добавить карточку перфоратора BOSCH BFG 3000 в закладки">В закладки</button>
               </li>
             </ul>
           </div>
           <h3 class="product-card-name">Перфоратор BOSCH BFG 3000</h3>
           <del class="product-card-old-price">22500 Р.</del>
-          <a class="button button-danger product-card-price" href="">15500 Р.</a>
+          <a class="button button-danger product-card-price" href="blank.html"
+            aria-label="Перейти к оформлению покупки товара">15500 Р.</a>
           <b class="mark">New</b>
         </section>
         <section class="product-card card-bfg6000">
@@ -437,18 +445,21 @@
               alt="Перфоратор черно-синего цвета в собранном виде со средним сверлом, c измерителем глубины сверления на светлом фоне.">
             <ul class="list product-actions-list">
               <li class="product-actions-item">
-                <button class="button-default button-success product-actions-buy" type="button">
+                <button class="button-default button-success product-actions-buy" type="button"
+                  aria-label="Добавить перфоратор BOSCH BFG 6000 в корзину">
                   <span>Купить</span>
                 </button>
               </li>
               <li class="product-actions-item">
-                <button class="button button-outline-success product-actions-bookmark">В закладки</button>
+                <button class="button button-outline-success product-actions-bookmark"
+                  aria-label="Добавить карточку перфоратора BOSCH BFG 6000 в закладки">В закладки</button>
               </li>
             </ul>
           </div>
           <h3 class="product-card-name">Перфоратор BOSCH BFG 6000</h3>
           <del class="product-card-old-price">30500 Р.</del>
-          <a class="button button-danger product-card-price" href="">25500 Р.</a>
+          <a class="button button-danger product-card-price" href="blank.html"
+            aria-label="Перейти к оформлению покупки товара">25500 Р.</a>
         </section>
         <section class="product-card card-bfg2000">
           <div class="product-card-image-container">
@@ -456,17 +467,20 @@
               alt="Перфоратор черно-синего цвета в собранном виде со средним сверлом на светлом фоне">
             <ul class="list product-actions-list">
               <li class="product-actions-item">
-                <button class="button-default button-success product-actions-buy" type="button">
+                <button class="button-default button-success product-actions-buy" type="button"
+                  aria-label="Добавить перфоратор BOSCH BFG 2000 в корзину">
                   <span>Купить</span>
                 </button>
               </li>
               <li class="product-actions-item">
-                <button class="button button-outline-success product-actions-bookmark">В закладки</button>
+                <button class="button button-outline-success product-actions-bookmark"
+                  aria-label="Добавить карточку перфоратора BOSCH BFG 2000 в закладки">В закладки</button>
               </li>
             </ul>
           </div>
           <h3 class="product-card-name">Перфоратор BOSCH BFG 2000</h3>
-          <a class="button button-danger product-card-price" href="">12500 Р.</a>
+          <a class="button button-danger product-card-price" href="blank.html"
+            aria-label="Перейти к оформлению покупки товара">12500 Р.</a>
           <span class="mark">New</span>
         </section>
         <section class="product-card card-bfg3000">
@@ -475,18 +489,21 @@
               alt="Перфоратор черно-синего цвета в собранном виде со средним сверлом на светлом фоне">
             <ul class="list product-actions-list">
               <li class="product-actions-item">
-                <button class="button-default button-success product-actions-buy" type="button">
+                <button class="button-default button-success product-actions-buy" type="button"
+                  aria-label="Добавить перфоратор BOSCH BFG 3000 в корзину">
                   <span>Купить</span>
                 </button>
               </li>
               <li class="product-actions-item">
-                <button class="button button-outline-success product-actions-bookmark">В закладки</button>
+                <button class="button button-outline-success product-actions-bookmark"
+                  aria-label="Добавить карточку перфоратора BOSCH BFG 3000 в закладки">В закладки</button>
               </li>
             </ul>
           </div>
           <h3 class="product-card-name">Перфоратор BOSCH BFG 3000</h3>
           <del class="product-card-old-price">22500 Р.</del>
-          <a class="button button-danger product-card-price" href="">15500 Р.</a>
+          <a class="button button-danger product-card-price" href="blank.html"
+            aria-label="Перейти к оформлению покупки товара">15500 Р.</a>
           <b class="mark">New</b>
         </section>
         <section class="product-card card-bfg6000">
@@ -495,18 +512,21 @@
               alt="Перфоратор черно-синего цвета в собранном виде со средним сверлом, c измерителем глубины сверления на светлом фоне.">
             <ul class="list product-actions-list">
               <li class="product-actions-item">
-                <button class="button-default button-success product-actions-buy" type="button">
+                <button class="button-default button-success product-actions-buy" type="button"
+                  aria-label="Добавить перфоратор BOSCH BFG 6000 в корзину">
                   <span>Купить</span>
                 </button>
               </li>
               <li class="product-actions-item">
-                <button class="button button-outline-success product-actions-bookmark">В закладки</button>
+                <button class="button button-outline-success product-actions-bookmark"
+                  aria-label="Добавить карточку перфоратора BOSCH BFG 6000 в закладки">В закладки</button>
               </li>
             </ul>
           </div>
           <h3 class="product-card-name">Перфоратор BOSCH BFG 6000</h3>
           <del class="product-card-old-price">30500 Р.</del>
-          <a class="button button-danger product-card-price" href="">25500 Р.</a>
+          <a class="button button-danger product-card-price" href="blank.html"
+            aria-label="Перейти к оформлению покупки товара">25500 Р.</a>
         </section>
         <section class="product-card card-bfg2000">
           <div class="product-card-image-container">
@@ -514,17 +534,20 @@
               alt="Перфоратор черно-синего цвета в собранном виде со средним сверлом на светлом фоне">
             <ul class="list product-actions-list">
               <li class="product-actions-item">
-                <button class="button-default button-success product-actions-buy" type="button">
+                <button class="button-default button-success product-actions-buy" type="button"
+                  aria-label="Добавить перфоратор BOSCH BFG 2000 в корзину">
                   <span>Купить</span>
                 </button>
               </li>
               <li class="product-actions-item">
-                <button class="button button-outline-success product-actions-bookmark">В закладки</button>
+                <button class="button button-outline-success product-actions-bookmark"
+                  aria-label="Добавить карточку перфоратора BOSCH BFG 2000 в закладки">В закладки</button>
               </li>
             </ul>
           </div>
           <h3 class="product-card-name">Перфоратор BOSCH BFG 2000</h3>
-          <a class="button button-danger product-card-price" href="">12500 Р.</a>
+          <a class="button button-danger product-card-price" href="blank.html"
+            aria-label="Перейти к оформлению покупки товара">12500 Р.</a>
           <span class="mark">New</span>
         </section>
       </section>
@@ -558,37 +581,38 @@
       </a>
       <ul class="list main-footer-nav-list">
         <li>
-          <a href="">Компания</a>
+          <a href="blank.html">Компания</a>
         </li>
         <li>
-          <a href="">Новости</a>
+          <a href="blank.html">Новости</a>
         </li>
         <li>
           <a>Каталог</a>
         </li>
         <li>
-          <a href="">Доставка</a>
+          <a href="blank.html">Доставка</a>
         </li>
         <li>
-          <a href="">Контакты</a>
+          <a href="blank.html">Контакты</a>
         </li>
         <li>
-          <a href="">Материалы</a>
+          <a href="blank.html">Материалы</a>
         </li>
         <li>
-          <a href="">Техника</a>
+          <a href="blank.html">Техника</a>
         </li>
         <li>
-          <a href="">Инструмент</a>
+          <a href="blank.html">Инструмент</a>
         </li>
         <li>
-          <a href="">Спецпредложения</a>
+          <a href="blank.html">Спецпредложения</a>
         </li>
       </ul>
       <div class="main-footer-contacts-wrapper">
         <address class="main-footer-address">г.&nbsp;<span class="nobr">Санкт-Петербург</span>,
           ул.&nbsp;Б.&nbsp;Конюшенная,&nbsp;д.&nbsp;19/8</address>
-        <address class="main-footer-address"><a href="tel:+78125550555">+7 (812) 555-05-55</a></address>
+        <address class="main-footer-address"><a href="tel:+78125550555" aria-label="Контактный номер телефона">+7 (812)
+            555-05-55</a></address>
       </div>
     </div>
     <div class="main-footer-secondary-wrapper">
@@ -600,8 +624,9 @@
           <h2 class="visually-hidden">Мы в соцсетях</h2>
           <ul class="list main-footer-socials-list">
             <li>
-              <a class="main-footer-socials-link" href=""><span class="visually-hidden">Перейти на сайт ВКонтакте</span>
-                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <a class="main-footer-socials-link" href="https://www.vk.com">
+                <svg role="img" aria-label="Логотип ВКонтакте" width="44" height="44" viewBox="0 0 44 44" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M22.1627 1.4839C33.6533 1.4839 42.9683 10.5873 42.9683 21.8169C42.9683 33.0461 33.6533 42.1494 22.1627 42.1494C10.6721 42.1494 1.35714 33.0461 1.35714 21.8169C1.35714 10.5873 10.6721 1.4839 22.1627 1.4839Z"
                     fill="#212A3A" />
@@ -612,8 +637,9 @@
               </a>
             </li>
             <li>
-              <a class="main-footer-socials-link" href=""><span class="visually-hidden">Перейти на сайт Facebook</span>
-                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <a class="main-footer-socials-link" href="https://www.facebook.com">
+                <svg role="img" aria-label="Логотип Facebook" width="44" height="44" viewBox="0 0 44 44" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M21.8938 1.4839C33.1232 1.4839 42.2265 10.5873 42.2265 21.8169C42.2265 33.0461 33.1232 42.1494 21.8938 42.1494C10.6643 42.1494 1.56108 33.0461 1.56108 21.8169C1.56108 10.5873 10.6643 1.4839 21.8938 1.4839Z"
                     fill="#212A3A" />
@@ -623,8 +649,9 @@
               </a>
             </li>
             <li>
-              <a class="main-footer-socials-link" href=""><span class="visually-hidden">Перейти на сайт Instagram</span>
-                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <a class="main-footer-socials-link" href="https://www.instagram.com">
+                <svg role="img" aria-label="Логотип Instagram" width="44" height="44" viewBox="0 0 44 44" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M21.8938 1.4839C33.1233 1.4839 42.2265 10.5873 42.2265 21.8169C42.2265 33.0461 33.1233 42.1494 21.8938 42.1494C10.6643 42.1494 1.56112 33.0461 1.56112 21.8169C1.56112 10.5873 10.6643 1.4839 21.8938 1.4839Z"
                     fill="#212A3A" />
@@ -653,8 +680,9 @@
       <button class="button button-danger" type="button">Оформить заказ</button>
       <button class="button button-neutral" type="button">Продолжить покупки</button>
     </footer>
-    <button class="button-close-modal" type="button">
-      <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <button class="button-close-modal" type="button" aria-label="Закрыть окно">
+      <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+        focusable="false">
         <path
           d="M13.273 10.5L20.695 3.07799C21.084 2.68899 21.084 2.05299 20.695 1.66399L19.336 0.304995C18.947 -0.0840054 18.311 -0.0840054 17.922 0.304995L10.5 7.72699L3.07799 0.304995C2.68899 -0.0840054 2.05299 -0.0840054 1.66399 0.304995L0.304995 1.66399C-0.0840054 2.05299 -0.0840054 2.68899 0.304995 3.07799L7.72699 10.5L0.305995 17.922C-0.0830054 18.311 -0.0830054 18.947 0.305995 19.336L1.66499 20.695C2.05399 21.084 2.68999 21.084 3.07899 20.695L10.501 13.273L17.923 20.695C18.312 21.084 18.948 21.084 19.337 20.695L20.696 19.336C21.085 18.947 21.085 18.311 20.696 17.922L13.273 10.5Z"
           fill="#EE3643" />
