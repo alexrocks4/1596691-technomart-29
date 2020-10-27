@@ -332,6 +332,7 @@ img {
 .search-form-input:focus {
     color: var(--basic-black);
     background-color: var(--basic-white);
+    outline: none;
 }
 .search-form-input:focus::placeholder {
     color: var(--basic-black);
@@ -1202,6 +1203,7 @@ img {
 .services-delivery,
 .services-guarantee,
 .services-credit {
+    background-color: var(--basic-gray-light-ultra-100);
     position: relative;
     grid-column: 2 / -1;
     grid-row: 3 / 4;
@@ -1235,7 +1237,12 @@ img {
     cursor: pointer;
 }
 .services-item:not(.services-item-active) {
-    display: none;
+    z-index: -1;
+    opacity: 0;
+}
+.services-item:focus-within {
+    z-index: 10;
+    opacity: 1;
 }
 .services-delivery {
     background-image: url("../img/services-delivery-background.png");
