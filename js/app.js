@@ -14,7 +14,7 @@ function presetWriteUsModal() {
     let isStorageSupport = true;
     let storageName = '';
     let storageEmail = '';
-    
+
     /* Check localStorage support */
     try {
         storageName = localStorage.getItem('name');
@@ -68,7 +68,7 @@ closeModalButtons.forEach(function(button) {
     button.addEventListener('click', function(evt) {
         closeModal(evt, button.closest('.modal'));
     });
-}); 
+});
 
 
 /* Close modals on Esc key presse */
@@ -76,7 +76,17 @@ window.addEventListener('keydown', function(evt) {
 
     if (evt.code === 'Escape') {
         const openedModal = document.querySelector('.modal.modal-show');
-        
+
         if (openedModal) closeModal(evt, openedModal);
     }
+});
+
+/*** Map modal ***/
+
+const mapLink = document.querySelector('.contacts-map');
+const mapModal = document.querySelector('.map-modal');
+
+mapLink.addEventListener('click', function(evt) {
+  evt.preventDefault();
+  mapModal.classList.add('modal-show');
 });

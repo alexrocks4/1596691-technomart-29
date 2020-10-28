@@ -1685,7 +1685,6 @@ img {
 .map-modal {
     width: 943px;
     height: 449px;
-    display: none;
 }
 .map-modal iframe {
     border: none;
