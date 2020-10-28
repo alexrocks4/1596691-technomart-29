@@ -1562,9 +1562,22 @@ img {
 }
 
 /***** Modal ******/
+@keyframes bounce {
+    0%   {transform: translate(500%, -50%);}
+    50%  {transform: translate(-60%, -50%);}
+    75%  {transform: translate(-40%, -50%);}
+    100% {transform: translate(-50%, -50%);}
+}
+@keyframes shake {
+    0%, 100% {transform: translate(-50%, -50%);}
+    20%, 40%, 60%, 80% {transform: translate(-51%, -50%);}
+    10%, 30%, 50%, 70%, 90% {transform: translate(-49%, -50%);}
+}
+
 .modal {
     filter: drop-shadow(0px 4px 20px var(--special-black-extra));
     background-color: var(--basic-white);
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -1581,11 +1594,21 @@ img {
     background-color: var(--basic-red);
     z-index: 1000;
 }
+.modal-show {
+    display: block;
+}
 
 /* Write us modal */
 .write-us-modal {
     width: 620px;
-    display: none;
+}
+.write-us-modal.modal-show {
+    animation-name: bounce;
+    animation-duration: 1s;
+}
+.write-us-modal.modal-error {
+    animation-name: shake;
+    animation-duration: 0.7s;
 }
 .write-us-modal-form {
     margin-top: 46px;
