@@ -2270,7 +2270,6 @@ img {
 
 /*** Catalog page Add product to the basket modal */
 .to-basket-modal {
-    display: none;
     background-color: var(--basic-white);
     width: 620px;
 }

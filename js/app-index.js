@@ -92,22 +92,106 @@ mapLink.addEventListener('click', function(evt) {
 });
 
 
-/*** Slider in promo block ***/
+/*** 
+ * Making alive any slider switchers. Slider must have:
+ * 
+ * - switchers(any ineractive HTML element that switches slides)
+ * - items(images, text, ...etc)
+ * - active switcher class name
+ * - active item class name 
+ * 
+ * The order of items and switchers in HTML must be the same.
+ ***/
 
+function aliveSliderSwitchers({
+    switchersSelector,
+    itemsSelector,
+    activeSwitcherClass,
+    activeItemClass
+    }) {
+
+    const sliderSwitchers = document.querySelectorAll('.' + switchersSelector);
+    const sliderItems = document.querySelectorAll('.' + itemsSelector);
+
+    function showSlide(sliderItem, sliderSwitcher) {
+        sliderItem.classList.add(activeItemClass);
+        sliderSwitcher.classList.add(activeSwitcherClass);
+    }
+
+    function hideSlide() {
+        document.querySelector('.' + activeSwitcherClass).classList.remove(activeSwitcherClass);
+        document.querySelector('.' + activeItemClass).classList.remove(activeItemClass);
+    }
+
+    sliderSwitchers.forEach(function(switcher, currentIndex) {
+        switcher.addEventListener('click', function(evt) {
+            evt.preventDefault();
+            /* If user has clicked on the active switcher - nothing to do */
+            if (switcher.classList.contains(activeSwitcherClass)) return;
+            hideSlide();
+            showSlide(sliderItems[currentIndex], switcher);
+        })
+    });
+}
+
+/*** Making alive slider switches in promo block ***/
+const promoSliderOptions = {
+    switchersSelector: 'slider-switch',
+    itemsSelector: 'slider-item',
+    activeSwitcherClass: 'slider-switch--active',
+    activeItemClass: 'slider-item--active'
+};
+aliveSliderSwitchers(promoSliderOptions);
+
+/*** Making alive slider switches in services block ***/
+const servicesSliderOptions = {
+    switchersSelector: 'services-menu-button',
+    itemsSelector: 'services-item',
+    activeSwitcherClass: 'services-menu-active',
+    activeItemClass: 'services-item-active'
+};
+aliveSliderSwitchers(servicesSliderOptions);
+
+/* Promo-block sliders back and forward buttons logic. */
+const backButton = document.querySelector('.slider-back-button');
+const forwardButton = document.querySelector('.slider-forward-button');
 const sliderSwitchers = document.querySelectorAll('.slider-switch');
 const sliderItems = document.querySelectorAll('.slider-item');
 
-/* Slider switchers logic*/
-sliderSwitchers.forEach(function(switcher, currentIndex) {
-  switcher.addEventListener('click', function(evt) {
+backButton.addEventListener('click', function(evt) {
     evt.preventDefault();
-    /* If user clicked on the active switcher - nothing to do */
-    if (switcher.classList.contains('slider-switch--active')) return;
-    /* Deactivate current active switcher and slide */
+    let activeItemId;
+    let newActiveItemId;
+    /* Find active slider item id */
+    sliderItems.forEach(function(sliderItem, sliderItemId) {
+        if (sliderItem.classList.contains('slider-item--active')) activeItemId = sliderItemId;
+    });
+    newActiveItemId = activeItemId - 1;
+    /* If this is first slider item then slide to last slider item */
+    if (newActiveItemId < 0) newActiveItemId = sliderItems.length - 1;
+    /* Hide old active slide and deactivate corresponding switcher */
     document.querySelector('.slider-switch--active').classList.remove('slider-switch--active');
     document.querySelector('.slider-item--active').classList.remove('slider-item--active');
-    /* Make active new switcher and slide */
-    switcher.classList.add('slider-switch--active');
-    sliderItems[currentIndex].classList.add('slider-item--active');
-  })
+    /* Show new active slide an activate corresponding switcher */
+    sliderItems[newActiveItemId].classList.add('slider-item--active');
+    sliderSwitchers[newActiveItemId].classList.add('slider-switch--active');
+});
+
+forwardButton.addEventListener('click', function(evt) {
+    evt.preventDefault();
+    let activeItemId;
+    let newActiveItemId;
+    /* Find active slider item id */
+    sliderItems.forEach(function(sliderItem, sliderItemId) {
+        if (sliderItem.classList.contains('slider-item--active')) activeItemId = sliderItemId;
+    });
+    newActiveItemId = activeItemId + 1;
+    /* If this is the last slider item then slide to first slider item */
+    if (newActiveItemId > sliderItems.length - 1) newActiveItemId = 0;
+    /* Hide old active slide and deactivate corresponding switcher */
+    document.querySelector('.slider-switch--active').classList.remove('slider-switch--active');
+    document.querySelector('.slider-item--active').classList.remove('slider-item--active');
+    /* Show new active slide an activate corresponding switcher */
+    sliderItems[newActiveItemId].classList.add('slider-item--active');
+    sliderSwitchers[newActiveItemId].classList.add('slider-switch--active');
 });
