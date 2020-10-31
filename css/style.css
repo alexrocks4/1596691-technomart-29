@@ -930,10 +930,6 @@ img {
     max-width: 100%;
     max-height: 100%;
 }
-.product-card-image--hidden {
-    z-index: -1;
-    opacity: 0;
-}
 .product-card img {
     object-fit: contain;
 }
@@ -998,9 +994,6 @@ img {
     margin-top: 37px;
     margin-bottom: 55px;
     margin-left: 40px;
-}
-.product-actions-list--visible {
-    z-index: 0;
 }
 .product-actions-item:not(:last-child) {
     margin-bottom: 10px;
