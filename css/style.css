@@ -1005,7 +1005,7 @@ img {
 .product-actions-item:not(:last-child) {
     margin-bottom: 10px;
 }
-.product-actions-item button {
+.product-actions-item a {
     border-radius: 2px;
     width: 135px;
 }
