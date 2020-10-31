@@ -30,6 +30,7 @@
     --basic-gray-light-ultra-100: #F1F5F7;
     --basic-gray-light-ultra-150: #F2F6F8;
     --basic-gray-light-ultra-200: #F3F7F9;
+    --basic-gray-light-ultra-210: #F3F7F8;
     --basic-gray-light-ultra-250: #F4F4F4;;
     --basic-gray-light-ultra-300: #E5E5E5;
     --basic-gray-dark: #3D546F;
@@ -256,8 +257,7 @@ img {
 
 /******* Main header *******/
 .main-header {
-    background-color: var(--special-black-ultra);
-    background-image: url("../img/main-header-background.png");
+    background-color: var(--basic-gray-light-ultra-210);
     padding-bottom: 60px;
 }
 .submenu-wrapper {
@@ -1715,9 +1715,7 @@ img {
 }
 .logged-in-actions-item:first-child,
 .logged-in-actions-item:nth-child(2) {
-    background-color: var(--special-black-ultra);
-    background-image: url("../img/main-header-logged-in-list-background.png");
-    background-repeat: repeat;
+    background-color: var(--basic-white);
 }
 .logged-in-actions-item:first-child {
     padding-top: 12px;
