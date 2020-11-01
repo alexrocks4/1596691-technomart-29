@@ -2103,11 +2103,21 @@ Do not show dot after last list item. */
     align-items: flex-start;
 }
 .product-sorting-header {
+    width: 185px;
     padding: 0;
     margin: 0;
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-right: 140px;
+    margin-right: 36px;
+}
+.product-sorting-column2,
+.product-sorting-column3 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.product-sorting-column2 {
+    width: 400px;
 }
 .product-sorting-button {
     font: inherit;
@@ -2115,18 +2125,13 @@ Do not show dot after last list item. */
     border: none;
     color: var(--special-black);
     background-color: transparent;
+    width: 73px;
     padding: 0;
     margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 45px;
     text-align: left;
-}
-.product-sorting-button span {
-    background-image: url("../img/underline-dashed.png");
-    background-repeat: repeat-x;
-    background-size: 113px 1px;
-    background-position: bottom 1px left 0;
-}
-.product-sorting-button:nth-of-type(3) span {
-    background-position: bottom 0 left 0;
 }
 .product-sorting-button:hover span {
     color: var(--basic-black);
@@ -2135,46 +2140,32 @@ Do not show dot after last list item. */
     background-position: bottom 1px left 0;
     padding-bottom: 3px;
 }
-.product-sorting-button:active span{
+.product-sorting-button:active {
     color: var(--basic-red);
     background-image: none;
 }
-.product-sorting-button--active span{
+.product-sorting-button--active {
     color: var(--basic-red);
-    background-image: none;
 }
-.product-sorting-button:first-of-type {
-    width: 73px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.price-sorting-button {
     margin-right: 50px;
 }
-.product-sorting-button:nth-of-type(2) {
-    width: 73px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.type-sorting-button {
     margin-right: 45px;
 }
-.product-sorting-button:nth-of-type(3) {
+.functioning-sorting-button {
     width: 114px;
     margin-top: 9px;
     margin-bottom: 11px;
     margin-right: 45px;
-}
-.product-sorting-direction-button:nth-of-type(4) {
-    margin-top: 14px;
-    margin-bottom: 14px;
-    margin-right: 21px;
-}
-.product-sorting-direction-button:last-of-type {
-    margin-top: 14px;
-    margin-bottom: 14px;
 }
 .product-sorting-direction-button {
     display: flex;
     border: none;
     padding: 0;
     margin: 0;
+    margin-top: 14px;
+    margin-bottom: 14px;
 }
 .product-sorting-ascending-icon:hover path,
 .product-sorting-descending-icon:hover path {
@@ -2184,6 +2175,9 @@ Do not show dot after last list item. */
 .product-sorting-ascending-icon:active path,
 .product-sorting-descending-icon:active path {
     fill: var(--basic-red);
+}
+.ascending-sorting-button {
+  margin-right: 21px;
 }
 /*** Products chosen block ***/
 .chosen-products {
