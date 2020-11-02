@@ -369,16 +369,26 @@ img {
     padding-left: 20px;
     padding-right: 14px;
 }
-.bookmark-button:active {
-    color: var(--special-white);
-    background-color: var(--basic-dark-ultra);
-}
-.bookmark-button svg {
+.bookmark-button .bookmark-icon {
+    opacity: 0.3;
     margin-top: 3px;
     margin-right: 9px;
 }
 .bookmark-filled {
     background-color: var(--basic-red);
+}
+.bookmark-button:hover .bookmark-icon{
+    opacity: 1;
+}
+.bookmark-button:hover path {
+    fill: var(--basic-white);
+}
+.bookmark-button:active {
+    color: var(--special-white);
+    background-color: var(--basic-dark-ultra);
+}
+.bookmark-button:active path{
+    fill: var(--special-white-extra);
 }
 /* Products actions */
 .products-actions-list {
@@ -410,18 +420,28 @@ img {
     padding-left: 26px;
     padding-right: 14px;
 }
-.basket-link svg {
+.basket-link .basket-icon {
+    opacity: 0.3;
     margin-top: 3px;
     margin-right: 8px;
 }
-.basket-link:active {
-    color: var(--special-white);
-    background-color: transparent;
-}
 .basket-not-empty {
-    background-color: var(--basic-red);
+  background-color: var(--basic-red);
 }
 .basket-empty {
+  background-color: transparent;
+}
+.basket-link:hover .basket-icon {
+  opacity: 1;
+}
+.basket-link:hover path {
+  fill: var(--basic-white);
+}
+.basket-link:active path {
+  fill: var(--special-white-extra);
+}
+.basket-link:active {
+    color: var(--special-white);
     background-color: transparent;
 }
 /* Order */
