@@ -163,8 +163,12 @@
             <div class="price-range-container">
               <div class="price-range-scale">
                 <div class="filled-bar" style="width: 79%; margin-left: 4.5%"></div>
-                <div class="handle left-handle" style="left: 4.5%" tabindex="0" aria-hidden="true" focusable="false"></div>
-                <div class="handle right-handle" style="left: 83.5%" tabindex="0" aria-hidden="true" focusable="false"></div>
+                <div class="handle left-handle" style="left: 4.5%" tabindex="0" role="slider"
+                  aria-label="Минимальная цена за товар" aria-valuemin="0" aria-valuemax="40000" aria-valuenow="0">
+                </div>
+                <div class="handle right-handle" style="left: 83.5%" tabindex="0" role="slider"
+                  aria-label="Максимальная цена за товар" aria-valuemin="0" aria-valuemax="40000" aria-valuenow="30000">
+                </div>
               </div>
             </div>
             <div class="price-output-wrapper">
@@ -333,7 +337,9 @@
         </ul>
         <div class="product-sorting-column3">
           <!--По возрастанию-->
-          <button class="product-sorting-direction-button ascending-sorting-button product-sorting-direction-button--active" type="button">
+          <button
+            class="product-sorting-direction-button ascending-sorting-button product-sorting-direction-button--active"
+            type="button">
             <span class="visually-hidden">Сортировать по возрастанию</span>
             <svg class="product-sorting-ascending-icon" width="11" height="10" viewBox="0 0 11 10" fill="none"
               xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -398,8 +404,7 @@
         </section>
         <section class="product-card card-bfg6000">
           <div class="product-card-image-container">
-            <img class="product-card-image" src="img/perforator-bosch-bfg6000.jpg"
-              width="144" height="128"
+            <img class="product-card-image" src="img/perforator-bosch-bfg6000.jpg" width="144" height="128"
               alt="Перфоратор черно-синего цвета в собранном виде со средним сверлом, c измерителем глубины сверления на светлом фоне.">
             <ul class="list product-actions-list">
               <li class="product-actions-item">

@@ -990,9 +990,11 @@ img {
     font-size: 17px;
     line-height: 18px;
     background-color: var(--basic-red);
-    background-image: 
-        linear-gradient(225deg, var(--basic-white) 15%, transparent 15%),
-        linear-gradient(315deg, var(--basic-white) 15%, transparent 15%);
+    background-image:
+        linear-gradient(225deg, var(--basic-white) 10.612%, transparent 10.612%),
+        linear-gradient(315deg, var(--basic-white) 10.612%, transparent 10.612%);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
     width: 141px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -1975,11 +1977,11 @@ Do not show dot after last list item. */
 .form-label:active span {
     opacity: 0.4;
 }
-.checkbox:disabled ~ svg, 
+.checkbox:disabled ~ svg,
 .radio-button:disabled ~ svg {
     opacity: 0.3;
 }
-.checkbox:disabled ~ svg path, 
+.checkbox:disabled ~ svg path,
 .radio-button:disabled ~ svg path {
     fill: var(--basic-gray-light);
 }
