@@ -1958,17 +1958,32 @@ Do not show dot after last list item. */
 .form-label:hover {
     cursor: pointer;
 }
+.form-label:hover .checkbox:disabled ~ *,
+.form-label:hover .radio-button:disabled ~ * {
+    cursor: default;
+}
 .checkbox:focus ~ svg path,
 .radio-button:focus ~ svg path,
 .form-label:hover path {
     fill: var(--basic-gray-light-extra-100);
 }
-
 .form-label:active .checkbox-image,
 .form-label:active .radio-button-image {
     opacity: 0.3;
 }
 .form-label:active span {
+    opacity: 0.4;
+}
+.checkbox:disabled ~ svg, 
+.radio-button:disabled ~ svg {
+    opacity: 0.3;
+}
+.checkbox:disabled ~ svg path, 
+.radio-button:disabled ~ svg path {
+    fill: var(--basic-gray-light);
+}
+.checkbox:disabled ~ span,
+.radio-button:disabled ~ span {
     opacity: 0.4;
 }
 /* Price filter fieldset */
@@ -2062,15 +2077,15 @@ Do not show dot after last list item. */
 .brands-filter-fieldset .form-label:not(:last-of-type) {
     margin-bottom: 16px;
 }
-.brands-filter-fieldset .checkbox-image--unchecked {
-    margin-right: 12px;
-}
-.brands-filter-fieldset .checkbox-image--checked {
-    margin-right: 8px;
-}
 .brands-filter-fieldset .form-item-text {
     width: 185px;
     align-self: center;
+}
+.brands-filter-fieldset .checkbox-image--unchecked ~ .form-item-text {
+    padding-left: 12px;
+}
+.brands-filter-fieldset .checkbox-image--checked ~ .form-item-text {
+    padding-left: 8px;
 }
 /* Power filter fieldset*/
 .power-filter-fieldset .product-filter-subheader {
@@ -2085,8 +2100,8 @@ Do not show dot after last list item. */
 .power-filter-fieldset .form-label:last-of-type {
     margin-bottom: 33px;
 }
-.power-filter-fieldset .radio-button-image {
-    margin-right: 10px;
+.power-filter-fieldset .radio-button-image ~ .form-item-text {
+    padding-left: 10px;
 }
 .power-filter-fieldset .form-item-text {
     width: 185px;
