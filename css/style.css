@@ -989,10 +989,10 @@ img {
     font-weight: 700;
     font-size: 17px;
     line-height: 18px;
-    background-image: url("../img/price-red-button.svg");
-    background-position: 0 0;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+    background-color: var(--basic-red);
+    background-image: 
+        linear-gradient(225deg, var(--basic-white) 15%, transparent 15%),
+        linear-gradient(315deg, var(--basic-white) 15%, transparent 15%);
     width: 141px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -1783,12 +1783,12 @@ img {
 Do not show dot after last list item. */
 .logged-in-actions-item:nth-child(2n + 3):not(:last-child)::before{
     content: "";
+    background-color: var(--basic-dark);
     position: absolute;
-    background-image: url("../img/list-item-circle.svg");
-    background-repeat: no-repeat;
-    width: 5px;
-    height: 5px;
-    top: 7.49px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    top: 7px;
     right: 13px;
 }
 .user-profile-link:hover path,
