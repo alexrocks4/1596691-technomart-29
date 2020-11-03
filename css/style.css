@@ -47,6 +47,7 @@
     --basic-white: #FFFFFF;
     --special-black: rgba(0, 0, 0, 0.3);
     --special-black-extra: rgba(0, 0, 0, 0.15);
+    --special-black-extra-100: rgba(0, 0, 0, 0.24);
     --special-black-ultra: rgba(0, 0, 0, 0.0001);
     --special-dark: rgba(50, 66, 92, 0.5);
     --special-gray-light: rgba(197, 197, 197, 0.3);
@@ -288,7 +289,7 @@ img {
     box-sizing: border-box;
     display: block;
     background-color: var(--basic-red);
-    box-shadow: inset 0px -5px 0px 0px rgba(0, 0, 0, 0.24);
+    box-shadow: inset 0px -5px 0px 0px var(--special-black-extra-100);
 }
 .main-logo img {
     display: block;
@@ -928,7 +929,7 @@ img {
     flex-wrap: wrap;
 }
 .product-card:hover {
-    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+    filter: drop-shadow(0px 4px 20px var(--special-black-extra));
 }
 .product-card:hover .product-card-image,
 .product-card-image-container:focus-within .product-card-image {
@@ -1424,7 +1425,7 @@ img {
     min-height: 193px;
     display: grid;
     grid-template-columns: 380px 1fr;
-    grid-template-rows: minmax(68px, auto) min-content;
+    grid-template-rows: minmax(67px, auto) min-content;
     grid-template-areas:
         "logo     links"
         "contacts links";
@@ -1432,9 +1433,9 @@ img {
 }
 .main-footer-logo {
     cursor: pointer;
-    padding: 20px 41px 25px;
+    padding: 19px 41px 25px;
     width: 220px;
-    min-height: 68px;
+    min-height: 67px;
     background-color: var(--basic-red);
     grid-area: logo;
 }
@@ -1521,8 +1522,8 @@ img {
     margin-right: 161px;
 }
 .main-footer-socials {
-    margin-top: 34px;
-    margin-bottom: 29px;
+    margin-top: 33px;
+    margin-bottom: 25px;
     margin-right: 117px;
 }
 .main-footer-socials-list {
@@ -2081,10 +2082,10 @@ Do not show dot after last list item. */
     width: 185px;
     align-self: center;
 }
-.brands-filter-fieldset .checkbox-image--unchecked ~ .form-item-text {
+.brands-filter-fieldset .checkbox:not(:checked) ~ .form-item-text {
     padding-left: 12px;
 }
-.brands-filter-fieldset .checkbox-image--checked ~ .form-item-text {
+.brands-filter-fieldset .checkbox:checked ~ .form-item-text {
     padding-left: 8px;
 }
 /* Power filter fieldset*/
