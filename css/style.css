@@ -2184,24 +2184,31 @@ Do not show dot after last list item. */
     border: none;
     color: var(--special-black);
     background-color: transparent;
+    position: relative;
+    display: block;
     padding: 0;
     padding-bottom: 2px;
     margin: 0;
     text-align: left;
 }
-.product-sorting-button:not(.product-sorting-button--active) {
-    background-image: repeating-linear-gradient(to right, var(--basic-red) 0px, var(--basic-red) 1px, var(--basic-white) 1px, var(--basic-white) 2px);
-    background-size: 100% 1px;
-    background-repeat: repeat-x;
-    background-position: bottom;
+.product-sorting-button::before {
+    content: '';
+    background-position: 0 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+}
+.product-sorting-button:not(.product-sorting-button--active)::before {
+    background-image: repeating-linear-gradient(to right, var(--basic-red) 0px, var(--basic-red) 1px, transparent 1px, transparent 2px);
+}
+.product-sorting-button:hover::before {
+    background-image: repeating-linear-gradient(to right, var(--basic-red), var(--basic-red));
 }
 .product-sorting-button:hover {
     color: var(--basic-black);
     cursor: pointer;
-    background-image: linear-gradient(var(--basic-red), var(--basic-red));
-    background-size: 100% 1px;
-    background-repeat: repeat-x;
-    background-position: bottom;
 }
 .product-sorting-button:active {
     color: var(--basic-red);
